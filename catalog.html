@@ -13,14 +13,12 @@
           <img src="images/logos/site-logo-header.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс.">
         </a>
         <nav class="site-navigation">
+          <form class="search-field" action="https://echo.htmlacademy.ru/" method="get">
+            <input class="field" type="search" name="search" placeholder="Поиск по сайту"
+              aria-label="Поле поиска по сайту" required>
+            <button class="search-button" type="submit">Найти</button>
+          </form>
           <ul class="navigation-list user-menu">
-            <li class="user-menu-item search-form">
-              <form class="search-field" action="https://echo.htmlacademy.ru/" method="get">
-                <input class="field" type="search" name="search" placeholder="Поиск по сайту"
-                  aria-label="Поле поиска по сайту" required>
-                <button class="search-button" type="submit">Найти</button>
-              </form>
-            </li>
             <li class="user-menu-item">
               <a class="user-menu-link logged-in-user-button" href="#">Коля Петухов</a>
               <span class="visually-hidden">Имя пользователя</span>
@@ -34,7 +32,8 @@
             </li>
             <li class="user-menu-item cart">
               <a class="user-menu-link cart-button" href="#">
-                <span class="cart-number">2</span>Корзина
+                <span class="cart-number">2</span>
+                <span>Корзина</span>
               </a>
               <div class="popover popover-cart">
                 <h2 class="visually-hidden">Окно корзины</h2>
@@ -126,10 +125,9 @@
           </li>
         </ol>
       </header>
-      <section class="catalog-list">
-        <h2 class="visually-hidden">Список товаров с фильтрами</h2>
-        <div class="catalog-filter-container">
-          <p class="catalog-filter-heading">Фильтр:</p>
+      <div class="catalog-container">
+        <section class="catalog-filter">
+          <h2 class="catalog-filter-heading">Фильтр:</h2>
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="catalog-filter-top">
               <legend class="catalog-filter-group-title">Стоимость</legend>
@@ -208,8 +206,9 @@
             </fieldset>
             <button class="submit-button" type="submit">Показать</button>
           </form>
-        </div>
-        <div class="catalog-list">
+        </section>
+        <section class="catalog-list">
+          <h2 class="visually-hidden">Список товаров</h2>
           <div class="catalog-sorting">
             <p class="catalog-sorting-heading">Сортировка:</p>
             <span class="visually-hidden">Выбор параметров сортировки товаров</span>
@@ -232,7 +231,7 @@
           <div class="catalog-product-list">
             <ul class="product-list">
               <li class="product-card new-item">
-                <a class="product-card-link">
+                <a class="product-card-link" href="#">
                   <img class="product-card-image" src="images/photos/catalog-product-1.jpg" width="360" height="380"
                     alt="Любительская селфи-палка.">
                   <div class="product-card-description">
@@ -241,11 +240,11 @@
                   </div>
                 </a>
                 <div class="product-details-wrapper">
-                  <a class="product-details">Подробнее</a>
+                  <a class="product-details" href="#">Подробнее</a>
                 </div>
               </li>
               <li class="product-card new-item">
-                <a class="product-card-link">
+                <a class="product-card-link" href="#">
                   <img class="product-card-image" src="images/photos/catalog-product-2.jpg" width="360" height="380"
                     alt="Профессиональная селфи-палка.">
                   <div class="product-card-description">
@@ -254,11 +253,11 @@
                   </div>
                 </a>
                 <div class="product-details-wrapper">
-                  <a class="product-details">Подробнее</a>
+                  <a class="product-details" href="#">Подробнее</a>
                 </div>
               </li>
               <li class="product-card new-item">
-                <a class="product-card-link">
+                <a class="product-card-link" href="#">
                   <img class="product-card-image" src="images/photos/catalog-product-3.jpg" width="360" height="380"
                     alt="Непотопляемая селфи-палка.">
                   <div class="product-card-description">
@@ -267,11 +266,11 @@
                   </div>
                 </a>
                 <div class="product-details-wrapper">
-                  <a class="product-details">Подробнее</a>
+                  <a class="product-details" href="#">Подробнее</a>
                 </div>
               </li>
               <li class="product-card new-item">
-                <a class="product-card-link">
+                <a class="product-card-link" href="#">
                   <img class="product-card-image" src="images/photos/catalog-product-4.jpg" width="360" height="380"
                     alt="Селфи-палка «Следуй за мной».">
                   <div class="product-card-description">
@@ -280,16 +279,13 @@
                   </div>
                 </a>
                 <div class="product-details-wrapper">
-                  <a class="product-details">Подробнее</a>
+                  <a class="product-details" href="#">Подробнее</a>
                 </div>
               </li>
             </ul>
-            <a class="product-list-show-more" type="button">Загрузить ещё</a>
+            <a class="product-list-show-more" href="#">Загрузить ещё</a>
             <div class="pagination-container">
-              <div class="previous-page-button">
-                <a class="pagination-button pagination-previous pagination-disabled" href="#">Назад</a>
-                <span class="visually-hidden">Кнопка перехода на предыдущую страницу</span>
-              </div>
+              <a class="pagination-button pagination-previous pagination-disabled" href="#">Назад</a>
               <ol class="paginatoion-list">
                 <li class="pagination-item">
                   <a class="pagination-link pagination-current" href="#">1</a>
@@ -307,14 +303,11 @@
                   <a class="pagination-link" href="#">15</a>
                 </li>
               </ol>
-              <div class="next-page-button">
-                <a class="pagination-button pagination-next" href="#">Вперёд</a>
-                <span class="visually-hidden">Кнопка перехода на следующую страницу</span>
-              </div>
+              <a class="pagination-button pagination-next" href="#">Вперёд</a>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
     <footer class="page-footer">
       <h2 class="visually-hidden">Контакты и сервисы</h2>
@@ -347,17 +340,17 @@
           <ul class="social-list">
             <li class="social-item telegram">
               <a class="social-item-button" href="https://t.me/htmlacademy">
-                <img class="social-item-icon" src="images/icons/social-icon-telegram.svg" width="40" height="40" alt="Телеграм.">
+                <span class="visually-hidden">Мы в Телеграме</span>
               </a>
             </li>
             <li class="social-item youtube">
               <a class="social-item-button" href="https://www.youtube.com/user/htmlacademyru">
-                <img class="social-item-icon" src="images/icons/social-icon-youtube.svg" width="40" height="40" alt="Ютуб.">
+                <span class="visually-hidden">Мы на Ютубе</span>
               </a>
             </li>
             <li class="social-item twitter">
               <a class="social-item-button" href="https://twitter.com/htmlacademy_ru">
-                <img class="social-item-icon" src="images/icons/social-icon-twitter.svg" width="40" height="40" alt="Твиттер.">
+                <span class="visually-hidden">Мы в Твиттере</span>
               </a>
             </li>
           </ul>
@@ -371,5 +364,4 @@
       </div>
     </footer>
   </body>
-
 </html>

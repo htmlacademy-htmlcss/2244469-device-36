@@ -11,13 +11,11 @@
           <img src="images/logos/site-logo-header.svg" width="145" height="36" alt="Логотип интернет-магазина Девайс.">
         </a>
         <nav class="site-navigation">
+          <form class="search-field" action="https://echo.htmlacademy.ru/" method="get">
+            <input class="field" type="search" name="search" placeholder="Поиск по сайту" aria-label="Поле поиска по сайту" required>
+            <button class="search-button" type="submit">Найти</button>
+          </form>
           <ul class="navigation-list user-menu">
-            <li class="user-menu-item search-form">
-              <form class="search-field" action="https://echo.htmlacademy.ru/" method="get">
-                <input class="field" type="search" name="search" placeholder="Поиск по сайту" aria-label="Поле поиска по сайту" required>
-                <button class="search-button" type="submit">Найти</button>
-              </form>
-            </li>
             <li class="user-menu-item">
               <a class="user-menu-link login-button" href="#">Войти</a>
             </li>
@@ -27,7 +25,8 @@
             </li>
             <li class="user-menu-item cart">
               <a class="user-menu-link cart-button" href="#">
-                <span class="cart-number">2</span>Корзина
+                <span class="cart-number">2</span>
+                <span>Корзина</span>
               </a>
               <div class="popover popover-cart">
                 <h2 class="visually-hidden">Окно корзины</h2>
@@ -335,17 +334,17 @@
           <ul class="social-list">
             <li class="social-item telegram">
               <a class="social-item-button" href="https://t.me/htmlacademy">
-                <img class="social-item-icon" src="images/icons/social-icon-telegram.svg" width="40" height="40" alt="Телеграм.">
+                <span class="visually-hidden">Мы в Телеграме</span>
               </a>
             </li>
             <li class="social-item youtube">
               <a class="social-item-button" href="https://www.youtube.com/user/htmlacademyru">
-                <img class="social-item-icon" src="images/icons/social-icon-youtube.svg" width="40" height="40" alt="Ютуб.">
+                <span class="visually-hidden">Мы на Ютубе</span>
               </a>
             </li>
             <li class="social-item twitter">
               <a class="social-item-button" href="https://twitter.com/htmlacademy_ru">
-                <img class="social-item-icon" src="images/icons/social-icon-twitter.svg" width="40" height="40" alt="Твиттер.">
+                <span class="visually-hidden">Мы в Твиттере</span>
               </a>
             </li>
           </ul>
