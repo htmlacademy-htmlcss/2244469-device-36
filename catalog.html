@@ -4,9 +4,10 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог товаров интернет-магазина Девайс</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
-  <body>
+  <body class="page-body">
     <header class="page-header">
       <div class="header-wrapper">
         <a class="navigation-page-logo" href="index.html">
@@ -19,11 +20,11 @@
             <button class="search-button" type="submit">Найти</button>
           </form>
           <ul class="navigation-list user-menu">
-            <li class="user-menu-item">
+            <li class="user-menu-item login">
               <a class="user-menu-link logged-in-user-button" href="#">Коля Петухов</a>
               <span class="visually-hidden">Имя пользователя</span>
             </li>
-            <li class="user-menu-item">
+            <li class="user-menu-item logout">
               <a class="user-menu-link logout-button" href="#">Выйти</a>
             </li>
             <li class="user-menu-item compare-products">
@@ -68,7 +69,7 @@
           <div class="product-list-container">
             <a class="product-list-dropdown-menu" href="#">Каталог товаров</a>
             <div class="subcatalog">
-              <ul class="subcatalog-list">
+              <ul class="subcatalog-list first-column">
                 <li class="subcatalog-item">
                   <a class="subcatalog-link" href="#">Виртуальная реальность</a>
                 </li>
@@ -79,7 +80,7 @@
                   <a class="subcatalog-link" href="#">Экшн-камеры</a>
                 </li>
               </ul>
-              <ul class="subcatalog-list">
+              <ul class="subcatalog-list second-column">
                 <li class="subcatalog-item">
                   <a class="subcatalog-link" href="#">Фитнес-браслеты</a>
                 </li>
@@ -87,7 +88,7 @@
                   <a class="subcatalog-link" href="#">Умные часы</a>
                 </li>
               </ul>
-              <ul class="subcatalog-list">
+              <ul class="subcatalog-list third-column">
                 <li class="subcatalog-item">
                   <a class="subcatalog-link" href="#">Квадрокоптеры</a>
                 </li>

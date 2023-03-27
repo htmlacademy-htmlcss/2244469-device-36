@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Интернет-магазин Девайс</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
-  <body>
+  <body class="page-body">
     <header class="page-header">
       <div class="header-wrapper">
         <a class="navigation-page-logo">
@@ -16,7 +17,7 @@
             <button class="search-button" type="submit">Найти</button>
           </form>
           <ul class="navigation-list user-menu">
-            <li class="user-menu-item">
+            <li class="user-menu-item login">
               <a class="user-menu-link login-button" href="#">Войти</a>
             </li>
             <li class="user-menu-item compare-products">
@@ -57,7 +58,7 @@
           <div class="product-list-container">
             <a class="product-list-dropdown-menu" href="#">Каталог товаров</a>
             <div class="subcatalog">
-              <ul class="subcatalog-list">
+              <ul class="subcatalog-list first-column">
                 <li class="subcatalog-item">
                   <a class="subcatalog-link" href="#">Виртуальная реальность</a>
                 </li>
@@ -68,7 +69,7 @@
                   <a class="subcatalog-link" href="#">Экшн-камеры</a>
                 </li>
               </ul>
-              <ul class="subcatalog-list">
+              <ul class="subcatalog-list second-column">
                 <li class="subcatalog-item">
                   <a class="subcatalog-link" href="#">Фитнес-браслеты</a>
                 </li>
@@ -76,7 +77,7 @@
                   <a class="subcatalog-link" href="#">Умные часы</a>
                 </li>
               </ul>
-              <ul class="subcatalog-list">
+              <ul class="subcatalog-list third-column">
                 <li class="subcatalog-item">
                   <a class="subcatalog-link" href="#">Квадрокоптеры</a>
                 </li>
@@ -238,22 +239,16 @@
         </ul>
         <ul class="services-info-text-container">
           <li class="services-info-item">
-            <article class="services-info-article">
               <h3 class="services-info-heading">Доставка</h3>
               <p class="services-info-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-            </article>
           </li>
           <li class="services-info-item">
-            <article class="services-info-article">
               <h3 class="services-info-heading">Гарантия</h3>
               <p class="services-info-text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-            </article>
           </li>
           <li class="services-info-item">
-            <article class="services-info-article">
               <h3 class="services-info-heading">Кредит</h3>
               <p class="services-info-text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
-            </article>
           </li>
         </ul>
         <div class="special-order-container">
