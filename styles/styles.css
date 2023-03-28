@@ -54,6 +54,11 @@ html {
   color: #444;
 }
 
+.main-page,
+.catalog-page {
+  flex-grow: 1;
+}
+
 .search-field {
   margin: 0 0 45px;
   padding: 0;
@@ -104,7 +109,8 @@ html {
   list-style-type: none;
 }
 
-.page-body ul {
+.page-body ul,
+.footer-address-text {
   margin: 0;
   padding: 0;
 }
@@ -301,20 +307,28 @@ html {
 
 /*MAIN*/
 
+.welcome,
+.product-category,
+.special-order-container,
+.company-info-container {
+  margin: 0 140px 70px;
+}
+
 .slider .slider-list {
   display: flex;
-  width: 1160px;
-  margin: 0 140px;
   overflow: hidden;
 }
 
 .slider-item,
-.product-info-container {
+.product-info-container,
+.slider-dots,
+.product-category-list {
   display: flex;
 }
 
 .slider-item img {
   margin-right: 40px;
+  object-fit: contain;
 }
 
 .slider-image-number {
@@ -345,8 +359,11 @@ html {
   position: relative;
 }
 
-.slider-text-heading {
-  margin: 15px 0 29px;
+.slider-text-heading,
+.services-info-heading,
+.company-info-heading,
+.subscription-heading {
+  margin: 0;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   line-height: 50px;
@@ -354,10 +371,21 @@ html {
   color: #000;
 }
 
+.slider-text-heading {
+  margin: 15px 0 29px;
+}
+
 .product-info {
   margin: 50px 0;
   padding: 10px 5px;
   width: 220px;
+}
+
+.product-info,
+.services-button,
+.contacts-button,
+.submit-button,
+.footer-services-link {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -366,6 +394,14 @@ html {
   text-transform: uppercase;
   text-align: center;
   box-sizing: border-box;
+}
+
+.service-info-active .services-button {
+  color: #FFE17F;
+}
+
+.service-info-active {
+  background-color: #000;
 }
 
 .product-info-container {
@@ -394,3 +430,420 @@ html {
 .product-specs {
   margin: 0;
 }
+
+.slider-dots {
+  justify-content: center;
+}
+
+.slider-dots-button:not(:last-child) {
+  margin-right: 20px;
+}
+
+.dots {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 12px;
+  height: 12px;
+  appearance: none;
+  background-color: #FFF;
+  border: 2px solid #000;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.dots-button-active .dots {
+  background-color: #000;
+}
+
+.product-category-list {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-category-item {
+  width: 160px;
+  position: relative;
+}
+
+.product-category-list h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.services-info {
+  display: flex;
+  align-items: center;
+  margin: 0 140px 142px;
+  position: relative;
+}
+
+.services-info::after {
+  width: 1440px;
+  height: 289px;
+  position: absolute;
+  bottom: -72px;
+  right: -140px;
+  content: "";
+  background-color: #F0F0F0;
+  z-index: -1;
+}
+
+.services-info .services-info-list {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 280px;
+  margin: 64px 116px 64px 0;
+  position: relative;
+}
+
+.services-info-list::after {
+  width: 7px;
+  height: 319px;
+  position: absolute;
+  content: "";
+  background-color: #000;
+  bottom: -65px;
+  right: 0;
+}
+
+.services-info .services-info-text-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 873px;
+  margin: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.services-info-item {
+  width: 873px;
+  flex-shrink: 0;
+}
+
+.services-info-text {
+  margin: 0 390px 0 0;
+}
+
+.services-info-heading {
+  margin-bottom: 34px;
+}
+
+.services-info-title:not(:last-child)  {
+  margin: 0 0 35px;
+}
+
+.services-button {
+  display: inline-block;
+  padding: 9px 120px 11px 18px;
+  box-sizing: border-box;
+}
+
+.special-order-container {
+  background-color: #F0F0F0;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.special-order-link {
+  display: inline-block;
+  padding: 39px 318px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.special-order-link::before {
+  width: 125px;
+  height: 100px;
+  background-color: #FFE17F;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+}
+
+.company-info-container {
+  display: flex;
+}
+
+.company-info {
+  min-width: 520px;
+  position: relative;
+}
+
+.company-info::before {
+  width: 84px;
+  height: 7px;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background-color: #000;
+}
+
+.company-info:not(:last-child) {
+  margin-right: 108px;
+}
+
+.company-info-heading {
+  margin-bottom: 48px;
+}
+
+.company-info-heading:first-child {
+  margin-top: 47px;
+}
+
+.company-info-text,
+.subscription-text {
+  margin: 0;
+}
+
+.company-info-text,
+.contacts-address {
+  margin-bottom: 30px;
+}
+
+.delivery-companies-list .delivery-companies-item {
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #000;
+  margin: 0 0 19px 26px;
+  position: relative;
+}
+
+.delivery-companies-list li::before {
+  background-color: #FFC700;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: -26px;
+  content: "";
+}
+
+.contacts-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 6px;
+}
+
+.contacts-button.about-us {
+  margin-top: 11px;
+}
+
+.company-info-subheading {
+  margin: 0 0 15px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.contacts-address p,
+.contacts-address a {
+  margin: 0;
+  text-decoration: none;
+  font-style: normal;
+  color: #444;
+}
+
+.contacts-address a {
+  text-decoration: underline;
+}
+
+.newsletter-subscription {
+  background-color: #F0F0F0;
+  padding: 28px 140px;
+}
+
+.subscription-text-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 144px;
+}
+
+.subscription-text {
+  width: 542px;
+  margin-left: auto;
+  margin-top: 36px;
+}
+
+.subscription-heading {
+  width: 348px;
+  margin-top: 36px;
+}
+
+.subscription-form-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.newsletter-subscription-field {
+  display: flex;
+  width: 810px;
+  margin-bottom: 28px;
+}
+
+.newsletter-subscription-field .field {
+  width: 557px;
+  padding: 11px 16px;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  color: rgba(68, 68, 68, 0.5);
+  appearance: none;
+  border: none;
+  border-bottom: 3px solid #C4C4C4;
+  background-color: transparent;
+}
+
+.submit-button {
+  padding: 15px 36px;
+  border: 3px solid #C4C4C4;
+}
+
+.subscription-form-container span {
+  margin-left: auto;
+}
+
+.page-footer {
+  padding: 52px 140px 51px;
+}
+
+.page-footer,
+.page-footer a,
+.page-footer p {
+  font-size: 16px;
+  line-height: 20px;
+  font-style: normal;
+  color: #FFF;
+  background-color: #444;
+}
+
+.footer-middle,
+.footer-services-list,
+.footer-bottom,
+.social-list {
+  display: flex;
+}
+
+.footer-up {
+  margin-bottom: 35px;
+}
+
+.footer-middle {
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 62px;
+}
+
+.footer-contacts-address {
+  max-width: 239px;
+  flex-shrink: 0;
+}
+
+.footer-services-list {
+  max-width: 620px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px 23px;
+}
+
+.footer-services-link {
+  display: inline-block;
+  padding: 6px;
+}
+
+.footer-contacts-phone {
+  max-width: 190px;
+  flex-shrink: 0;
+}
+
+.footer-phone {
+  display: inline-block;
+  padding: 6px;
+}
+
+.footer-bottom {
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  gap: 35px;
+}
+
+.footer-bottom:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.footer-bottom::before {
+  width: 80px;
+  height: 7px;
+  background-color: #FFC700;
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  left: 0;
+  content: "";
+}
+
+.footer-bottom .social-list {
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 600px;
+  gap: 15px;
+  margin-left: 310px;
+}
+
+.social-item {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.developer-logo-container {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  max-width: 190px;
+  margin: 0;
+  padding: 0;
+}
+
+/*MODAL WINDOW*/
+
+.modal-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(240, 240, 240, 0.9);
+  z-index: 20;
+}
+
+.modal-window {
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  grid-template-columns: repeat(4, min-content);
+  position: relative;
+  width: 920px;
+  margin: auto;
+  padding: 72px 80px;
+}
+
+/*CATALOG*/
