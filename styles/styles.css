@@ -44,7 +44,7 @@ html {
   flex-direction: column;
   width: 1440px;
   min-height: 100%;
-  margin: 0 auto;
+  margin: 0;
   padding: 0 20px;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
@@ -52,6 +52,12 @@ html {
   font-weight: 400;
   background-color: #FFF;
   color: #444;
+}
+
+.page-header {
+  width: 1160px;
+  position: relative;
+  z-index: 10;
 }
 
 .main-page,
@@ -92,6 +98,7 @@ html {
   appearance: none;
   border: 2px solid #000;
   border-radius: 0 50px 50px 0;
+  cursor: pointer;
 }
 
 .page-header a,
@@ -206,6 +213,10 @@ html {
   border-bottom: 1px solid transparent;
 }
 
+.cart-item-link {
+  display: flex;
+}
+
 .cart-item {
   padding: 20px 50px 20px 20px;
   display: flex;
@@ -263,6 +274,7 @@ html {
   padding: 33px 60px 27px;
   width: 1160px;
   display: flex;
+  flex-wrap: wrap;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
@@ -299,11 +311,8 @@ html {
 
 /*MAIN*/
 
-.welcome,
-.product-category,
-.special-order-container,
-.company-info-container {
-  margin: 0 140px 70px;
+.welcome {
+  width: 1160px;
 }
 
 .slider .slider-list {
@@ -311,18 +320,7 @@ html {
   overflow: hidden;
 }
 
-.cart-item-link,
-.slider-item,
-.product-info-container,
-.slider-dots,
-.product-category-list,
-.company-info-container,
-.footer-middle,
-.footer-services-list,
-.footer-bottom,
-.social-list,
-.pagination-container,
-.paginatoion-list {
+.slider-item {
   display: flex;
 }
 
@@ -355,7 +353,7 @@ html {
   display: flex;
   flex-direction: column;
   width: 560px;
-  margin-top: 105px;
+  padding-top: 105px;
   position: relative;
 }
 
@@ -371,10 +369,6 @@ html {
   line-height: 50px;
   font-weight: 800;
   color: #000;
-}
-
-.modal-window-title {
-  margin-bottom: 42px;
 }
 
 .slider-text-heading {
@@ -425,6 +419,7 @@ html {
 }
 
 .product-info-container {
+  display: flex;
   justify-content: flex-start;
 }
 
@@ -452,6 +447,7 @@ html {
 }
 
 .slider-dots {
+  display: flex;
   justify-content: center;
 }
 
@@ -477,7 +473,12 @@ html {
   background-color: #000;
 }
 
+.product-category {
+  width: 1160px;
+}
+
 .product-category-list {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -497,9 +498,8 @@ html {
 
 .services-info {
   display: flex;
-  align-items: center;
-  margin: 0 140px 142px;
   position: relative;
+  background-color: #F0F0F0;
 }
 
 .services-info::after {
@@ -565,6 +565,7 @@ html {
 }
 
 .special-order-container {
+  width: 1160px;
   background-color: #F0F0F0;
   text-align: center;
   font-family: "Raleway", sans-serif;
@@ -590,6 +591,11 @@ html {
   top: 0;
   left: 0;
   content: "";
+}
+
+.company-info-container {
+  display: flex;
+  width: 1160px;
 }
 
 .company-info {
@@ -761,8 +767,8 @@ html {
 }
 
 .footer-middle {
+  display: flex;
   justify-content: space-between;
-  align-items: center;
   gap: 35px;
   margin-bottom: 62px;
 }
@@ -773,6 +779,7 @@ html {
 }
 
 .footer-services-list {
+  display: flex;
   max-width: 620px;
   justify-content: center;
   flex-wrap: wrap;
@@ -795,6 +802,7 @@ html {
 }
 
 .footer-bottom {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
@@ -817,6 +825,7 @@ html {
 }
 
 .footer-bottom .social-list {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 600px;
@@ -866,6 +875,10 @@ html {
   background-color: #FFF;
   border: 10px solid #000;
   box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.modal-window-title {
+  margin-bottom: 42px;
 }
 
 .modal-form {
@@ -1144,15 +1157,26 @@ html {
   margin-bottom: 44px;
 }
 
+.product-card {
+  width: 360px;
+}
+
 .product-card-link {
-  display: grid;
-  grid-template-columns: 226px auto;
-  grid-template-rows: repeat(2, min-content);
-  row-gap: 32px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 32px;
 }
 
 .product-card-image {
-  grid-column: span 2;
+  object-fit: contain;
+}
+
+.product-card-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .product-list h3,
@@ -1160,8 +1184,12 @@ html {
   margin: 0;
 }
 
+.product-list h3 {
+  max-width: 226px;
+}
+
 .product-list p {
-  text-align: end;
+  max-width: 120px;
 }
 
 .product-list-show-more {
@@ -1175,12 +1203,14 @@ html {
 }
 
 .pagination-container {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #EBEBEB;
 }
 
 .paginatoion-list {
+  display: flex;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;

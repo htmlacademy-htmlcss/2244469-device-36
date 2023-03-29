@@ -48,8 +48,8 @@
                   </li>
                 </ul>
                 <div class="purchase-total-info">
-                  <p class="purchase-items-total-quantity">Товаров: 2</p>
-                  <p class="purchase-items-total-price">Сумма: 2000 ₽</p>
+                  <p class="purchase-items-total-quantity">Товаров: <output>2</output></p>
+                  <p class="purchase-items-total-price">Сумма: <output>2000 ₽</output></p>
                 </div>
                 <a class="open-cart-button" href="#">Открыть корзину</a>
               </div>
@@ -321,9 +321,9 @@
               <a class="footer-services-link" href="#">Контакты</a>
             </li>
           </ul>
-          <address class="footer-contacts-phone">
+          <div class="footer-contacts-phone">
             <a class="footer-phone" href="tel:+7812812-12-12">Тел.: +7 (812) 812-12-12</a>
-          </address>
+          </div>
         </div>
         <div class="footer-bottom">
           <ul class="social-list">
@@ -363,17 +363,17 @@
         <form class="special-order-form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="modal-form top-row-left">
             <label class="modal-form-title" for="name-input">Ваше имя:</label>
-            <input class="modal-form-field" type="text" id="name-input" name="name-input" placeholder="Введите имя">
+            <input class="modal-form-field" type="text" id="name-input" name="name-input" placeholder="Введите имя" required>
             <span class="modal-form-hint">Добавьте имя</span>
           </div>
           <div class="modal-form top-row-right">
             <label class="modal-form-title" for="email-input">Ваш e-mail:</label>
-            <input class="modal-form-field" type="email" id="email-input" name="email-input" placeholder="Введите e-mail">
+            <input class="modal-form-field" type="email" id="email-input" name="email-input" placeholder="Введите e-mail" required>
             <span class="modal-form-hint error-message">Забавный у вас адрес</span>
           </div>
           <div class="modal-form bottom-row-left">
             <label class="modal-form-title" for="order-input">Что нужно привезти:</label>
-            <input class="modal-form-field" type="text" id="order-input" name="order-input" placeholder="В свободной форме">
+            <input class="modal-form-field" type="text" id="order-input" name="order-input" placeholder="В свободной форме" required>
           </div>
           <div class="modal-form bottom-row-right">
             <span class="modal-form-label">
@@ -388,7 +388,7 @@
               </span>
             </span>
             <div class="items-number-container">
-              <input class="items-number" id="order-items-number" name="order-items-number" type="number" step="1" value="1" min="0">
+              <input class="items-number" id="order-items-number" name="order-items-number" type="number" step="1" value="1" min="0" required>
               <button class="items-number-control minus-left" type="button">
                 <span class="visually-hidden">Кнопка минус для убавления количества товаров</span>
               </button>
