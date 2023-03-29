@@ -361,35 +361,35 @@
         </button>
         <h2 class="modal-window-title">Доставка под заказ</h2>
         <form class="special-order-form" action="https://echo.htmlacademy.ru/" method="post">
-          <div class="modal-form top-row">
+          <div class="modal-form top-row-left">
             <label class="modal-form-title" for="name-input">Ваше имя:</label>
             <input class="modal-form-field" type="text" id="name-input" name="name-input" placeholder="Введите имя">
             <span class="modal-form-hint">Добавьте имя</span>
           </div>
-          <div class="modal-form top-row">
+          <div class="modal-form top-row-right">
             <label class="modal-form-title" for="email-input">Ваш e-mail:</label>
             <input class="modal-form-field" type="email" id="email-input" name="email-input" placeholder="Введите e-mail">
             <span class="modal-form-hint error-message">Забавный у вас адрес</span>
           </div>
-          <div class="modal-form bottom-row">
+          <div class="modal-form bottom-row-left">
             <label class="modal-form-title" for="order-input">Что нужно привезти:</label>
             <input class="modal-form-field" type="text" id="order-input" name="order-input" placeholder="В свободной форме">
           </div>
-          <div class="modal-form bottom-row">
+          <div class="modal-form bottom-row-right">
             <span class="modal-form-label">
-              <label class="modal-form-label" for="order-items-number">Количество:</label>
+              <label class="modal-form-label title" for="order-items-number">Количество:</label>
               <span class="tooltip">
                 <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-items-number">
                   <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                 </button>
                 <span class="tooltip-text" role="tooltip" id="tooltip-label-items-number">
-                  Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.
+                  Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к&nbsp;провозу багажа.
                 </span>
               </span>
             </span>
             <div class="items-number-container">
               <input class="items-number" id="order-items-number" name="order-items-number" type="number" step="1" value="1" min="0">
-              <button class="items-number-control minus-right" type="button">
+              <button class="items-number-control minus-left" type="button">
                 <span class="visually-hidden">Кнопка минус для убавления количества товаров</span>
               </button>
               <button class="items-number-control plus-right" type="button">
@@ -397,7 +397,7 @@
               </button>
             </div>
           </div>
-          <button class="modal-form submit-button" type="submit">Отправить</button>
+          <button class="modal-form submit-button" type="submit"><span>Отправить</span></button>
         </form>
       </div>
     </div>
