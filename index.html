@@ -16,10 +16,10 @@
             <input class="field" type="search" name="search" placeholder="Поиск по сайту" aria-label="Поле поиска по сайту" required>
             <button class="search-button" type="submit">Найти</button>
           </form>
+          <div class="user-navigation login">
+            <a class="user-navigation-link login-button" href="#">Войти</a>
+          </div>
           <ul class="navigation-list user-menu">
-            <li class="user-menu-item login">
-              <a class="user-menu-link login-button" href="#">Войти</a>
-            </li>
             <li class="user-menu-item compare-products">
               <a class="user-menu-link compare-button" href="#">Сравнить</a>
               <span class="visually-hidden">Меню сравнения товаров</span>
@@ -58,30 +58,32 @@
           <div class="product-list-container">
             <a class="product-list-dropdown-menu" href="#">Каталог товаров</a>
             <div class="subcatalog">
-              <ul class="subcatalog-list first-column">
-                <li class="subcatalog-item">
-                  <a class="subcatalog-link" href="#">Виртуальная реальность</a>
-                </li>
-                <li class="subcatalog-item">
-                  <a class="subcatalog-link" href="#">Моноподы для cелфи</a>
-                </li>
-                <li class="subcatalog-item">
-                  <a class="subcatalog-link" href="#">Экшн-камеры</a>
-                </li>
-              </ul>
-              <ul class="subcatalog-list second-column">
-                <li class="subcatalog-item">
-                  <a class="subcatalog-link" href="#">Фитнес-браслеты</a>
-                </li>
-                <li class="subcatalog-item">
-                  <a class="subcatalog-link" href="#">Умные часы</a>
-                </li>
-              </ul>
-              <ul class="subcatalog-list third-column">
-                <li class="subcatalog-item">
-                  <a class="subcatalog-link" href="#">Квадрокоптеры</a>
-                </li>
-              </ul>
+              <div class="subcatalog-container">
+                <ul class="subcatalog-list first-column">
+                  <li class="subcatalog-item">
+                    <a class="subcatalog-link" href="#">Виртуальная реальность</a>
+                  </li>
+                  <li class="subcatalog-item">
+                    <a class="subcatalog-link" href="#">Моноподы для cелфи</a>
+                  </li>
+                  <li class="subcatalog-item">
+                    <a class="subcatalog-link" href="#">Экшн-камеры</a>
+                  </li>
+                </ul>
+                <ul class="subcatalog-list second-column">
+                  <li class="subcatalog-item">
+                    <a class="subcatalog-link" href="#">Фитнес-браслеты</a>
+                  </li>
+                  <li class="subcatalog-item">
+                    <a class="subcatalog-link" href="#">Умные часы</a>
+                  </li>
+                </ul>
+                <ul class="subcatalog-list third-column">
+                  <li class="subcatalog-item">
+                    <a class="subcatalog-link" href="#">Квадрокоптеры</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="main-menu-container">
@@ -252,9 +254,10 @@
           </li>
         </ul>
       </section>
-      <div class="special-order-container">
+      <section class="special-order-container">
+        <h2 class="visually-hidden">Заказ доставки редких товаров</h2>
         <a class="special-order-link" href="#">Доставим редкий товар под заказ</a>
-      </div>
+      </section>
       <div class="company-info-container">
         <section class="company-info about-us-container">
           <h2 class="company-info-heading">О нас</h2>

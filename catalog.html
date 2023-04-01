@@ -19,14 +19,13 @@
               aria-label="Поле поиска по сайту" required>
             <button class="search-button" type="submit">Найти</button>
           </form>
-          <ul class="navigation-list user-menu">
-            <li class="user-menu-item login">
-              <a class="user-menu-link logged-in-user-button" href="#">Коля Петухов</a>
+          <div class="user-navigation login">
+            <a class="user-navigation-link logged-in-user-button" href="#">Коля Петухов
               <span class="visually-hidden">Имя пользователя</span>
-            </li>
-            <li class="user-menu-item logout">
-              <a class="user-menu-link logout-button" href="#">Выйти</a>
-            </li>
+            </a>
+            <a class="user-navigation-link logout-button" href="#">Выйти</a>
+          </div>
+          <ul class="navigation-list user-menu">
             <li class="user-menu-item compare-products">
               <a class="user-menu-link compare-button" href="#">Сравнить</a>
               <span class="visually-hidden">Меню сравнения товаров</span>
@@ -69,30 +68,32 @@
           <div class="product-list-container">
             <a class="product-list-dropdown-menu" href="#">Каталог товаров</a>
             <div class="subcatalog">
-              <ul class="subcatalog-list first-column">
-                <li class="subcatalog-item">
-                  <a class="subcatalog-link" href="#">Виртуальная реальность</a>
-                </li>
-                <li class="subcatalog-item">
-                  <a class="subcatalog-link" href="#">Моноподы для cелфи</a>
-                </li>
-                <li class="subcatalog-item">
-                  <a class="subcatalog-link" href="#">Экшн-камеры</a>
-                </li>
-              </ul>
-              <ul class="subcatalog-list second-column">
-                <li class="subcatalog-item">
-                  <a class="subcatalog-link" href="#">Фитнес-браслеты</a>
-                </li>
-                <li class="subcatalog-item">
-                  <a class="subcatalog-link" href="#">Умные часы</a>
-                </li>
-              </ul>
-              <ul class="subcatalog-list third-column">
-                <li class="subcatalog-item">
-                  <a class="subcatalog-link" href="#">Квадрокоптеры</a>
-                </li>
-              </ul>
+              <div class="subcatalog-container">
+                <ul class="subcatalog-list first-column">
+                  <li class="subcatalog-item">
+                    <a class="subcatalog-link" href="#">Виртуальная реальность</a>
+                  </li>
+                  <li class="subcatalog-item">
+                    <a class="subcatalog-link" href="#">Моноподы для cелфи</a>
+                  </li>
+                  <li class="subcatalog-item">
+                    <a class="subcatalog-link" href="#">Экшн-камеры</a>
+                  </li>
+                </ul>
+                <ul class="subcatalog-list second-column">
+                  <li class="subcatalog-item">
+                    <a class="subcatalog-link" href="#">Фитнес-браслеты</a>
+                  </li>
+                  <li class="subcatalog-item">
+                    <a class="subcatalog-link" href="#">Умные часы</a>
+                  </li>
+                </ul>
+                <ul class="subcatalog-list third-column">
+                  <li class="subcatalog-item">
+                    <a class="subcatalog-link" href="#">Квадрокоптеры</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="main-menu-container">
@@ -229,8 +230,8 @@
               </a>
             </div>
           </div>
-          <div class="catalog-product-list">
-            <ul class="product-list">
+          <div class="catalog-list-container">
+            <ul class="catalog-product-list">
               <li class="product-card new-item">
                 <a class="product-card-link" href="#">
                   <img class="product-card-image" src="images/photos/catalog-product-1.jpg" width="360" height="380"
@@ -287,7 +288,7 @@
             <a class="product-list-show-more" href="#">Загрузить ещё</a>
             <div class="pagination-container">
               <a class="pagination-button pagination-previous pagination-disabled" href="#">Назад</a>
-              <ol class="paginatoion-list">
+              <ol class="pagination-list">
                 <li class="pagination-item">
                   <a class="pagination-link pagination-current" href="#">1</a>
                 </li>
