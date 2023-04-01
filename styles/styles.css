@@ -915,7 +915,7 @@ html {
 /*MODAL WINDOW*/
 
 .modal-container.modal-container-close {
-  /*display: none;*/
+  display: none;
 }
 
 .modal-container {
