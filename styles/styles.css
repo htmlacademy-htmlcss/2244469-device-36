@@ -40,22 +40,31 @@ html {
 }
 
 .page-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
   margin: 0;
   padding: 0;
+  height: 100%;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   line-height: 30px;
   font-weight: 400;
-  background-color: #FFF;
-  color: #444;
+  background-color: #FFFFFF;
+  color: #444444;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.content-wrapper {
+  width: 1160px;
+  margin: 0 auto;
 }
 
 .page-header {
   width: 1160px;
-  padding: 0 140px;
+  margin: 0 auto;
   position: relative;
   z-index: 10;
 }
@@ -112,8 +121,6 @@ html {
 
 .header-wrapper {
   position: relative;
-  width: 1160px;
-  margin: 0 auto;
   padding: 20px 60px 0;
   box-sizing: border-box;
   background-color: #FFE17F;
@@ -326,22 +333,45 @@ html {
 
 .welcome {
   width: 1160px;
-  margin: 0 0 70px 0;
-  padding: 0 140px;
+  margin: 0 auto 70px;
   position: relative;
+}
+
+.slider {
+  width: 1160px;
+  position: relative;
+  overflow: hidden;
 }
 
 .slider-list {
   display: flex;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   list-style-type: none;
+  counter-reset: section;
 }
 
 .slider-item {
   display: flex;
+}
 
+.slider-item::before {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  counter-increment: section;
+  content: counter(section, decimal-leading-zero) " ";
+  width: 100%;
+  height: 148px;
+  padding: 0 49px;
+  font-size: 180px;
+  line-height: 180px;
+  font-weight: 700;
+  color: #FFF;
+  background-color: #FFE17F;
+  box-sizing: border-box;
+  z-index: -1;
 }
 
 .slider-item img {
@@ -355,23 +385,6 @@ html {
   width: 560px;
   padding-top: 105px;
   position: relative;
-}
-
-.slider-image-number {
-  width: 1160px;
-  height: 148px;
-  padding: 0 49px;
-  position: absolute;
-  bottom: 234px;
-  right: 0;
-  font-size: 180px;
-  line-height: 180px;
-  font-weight: 700;
-  text-align: end;
-  color: #FFF;
-  background-color: #FFE17F;
-  box-sizing: border-box;
-  z-index: -1;
 }
 
 .slider-text-heading,
@@ -518,7 +531,7 @@ html {
 
 .product-category {
   width: 1160px;
-  margin: 0 0 70px 0;
+  margin: 0 auto 70px;
   padding: 0 140px;
 }
 
@@ -545,23 +558,26 @@ html {
 }
 
 .services-info {
-  display: flex;
-  position: relative;
   background-color: #F0F0F0;
-  margin: 0 0 70px 0;
-  padding: 0 140px 72px;
-  z-index: 10;
+  padding-bottom: 72px;
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.services-content {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .services-info::before {
   width: 100%;
   height: 105px;
   position: absolute;
-  bottom: 290px;
-  right: 0;
+  top: 0;
   content: "";
   background-color: #FFFFFF;
-  z-index: -1;
 }
 
 .services-info-list {
@@ -621,7 +637,8 @@ html {
 
 .special-order-container {
   width: 1160px;
-  margin: 0 140px 70px;
+  margin: 0 auto 70px;
+  position: relative;
   background-color: #F0F0F0;
   text-align: center;
   font-family: "Raleway", sans-serif;
@@ -636,7 +653,6 @@ html {
   display: inline-block;
   padding: 39px 318px;
   box-sizing: border-box;
-  position: relative;
 }
 
 .special-order-link::before {
@@ -652,8 +668,7 @@ html {
 .company-info-container {
   display: flex;
   width: 1160px;
-  margin: 0 0 70px;
-  padding: 0 140px;
+  margin: 0 auto 70px;
 }
 
 .company-info {
@@ -761,7 +776,12 @@ html {
 
 .newsletter-subscription {
   background-color: #F0F0F0;
-  padding: 28px 140px;
+}
+
+.newsletter-wrapper {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 64px 0 28px;
 }
 
 .subscription-text-container {
@@ -774,13 +794,11 @@ html {
 
 .subscription-text {
   width: 542px;
-  margin-left: auto;
-  margin-top: 36px;
 }
 
 .subscription-heading {
   width: 348px;
-  margin-top: 36px;
+  margin: 0;
 }
 
 .subscription-form-container {
@@ -818,10 +836,6 @@ html {
   margin-left: auto;
 }
 
-.page-footer {
-  padding: 52px 140px 51px;
-}
-
 .page-footer,
 .page-footer a,
 .page-footer p {
@@ -830,6 +844,12 @@ html {
   font-style: normal;
   color: #FFF;
   background-color: #444;
+}
+
+.footer-container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 52px 0 51px;
 }
 
 .footer-up {
@@ -936,7 +956,7 @@ html {
 }
 
 .twitter {
-  background: url(../images/icons/social-icon-twitter.svg)
+  background: url(../images/icons/social-icon-twitter.svg) no-repeat center
 }
 
 .developer-logo-container {
@@ -1131,8 +1151,9 @@ html {
 /*CATALOG*/
 
 .catalog-header {
-  margin: 0 140px;
-  padding: 35px 60px 34px;
+  width: 1100px;
+  margin: 0 auto;
+  padding: 35px 0 34px 60px;
 }
 
 .catalog-page h1 {
@@ -1173,7 +1194,7 @@ html {
 }
 
 .catalog-filter-container {
-  padding: 25px 60px;
+  padding: 25px 40px 25px 60px;
 }
 
 .catalog-filter fieldset {
@@ -1217,9 +1238,13 @@ html {
 }
 
 .catalog-container {
-  display: flex;
-  padding: 0 140px;
   background-color: #F0F0F0;
+}
+
+.catalog-content {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
 }
 
 .catalog-sorting {
