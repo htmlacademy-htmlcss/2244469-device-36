@@ -75,7 +75,7 @@ html {
 }
 
 .search-field {
-  margin: 0 0 45px;
+  margin: 0 26px 45px 0;
   padding: 0;
   display: flex;
   width: 517px;
@@ -87,12 +87,17 @@ html {
   padding: 10px 20px 10px 48px;
   font-size: 16px;
   line-height: 20px;
-  color: rgba(0, 0, 0, 0.3);
+  color: #000000;
   background-color: transparent;
   appearance: none;
-  border: 2px solid #000;
+  border: 2px solid #000000;
   border-right: none;
   border-radius: 50px 0 0 50px;
+  background: url("../images/icons/search-icon.svg") no-repeat 16px 12px;
+}
+
+.search-field .field:placeholder-shown {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .search-field .search-button {
@@ -102,12 +107,22 @@ html {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  color: #000;
+  color: #000000;
   background-color: transparent;
   appearance: none;
-  border: 2px solid #000;
+  border: 2px solid #000000;
   border-radius: 0 50px 50px 0;
   cursor: pointer;
+}
+
+.search-field .search-button:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.search-field .search-button:active {
+  background-color: #000000;
+  color: rgba(255, 255, 255, 0.3)
 }
 
 .page-header a,
@@ -116,7 +131,7 @@ html {
 .breadcrumbs a,
 .catalog-product-list a {
   text-decoration: none;
-  color: #000;
+  color: #000000;
 }
 
 .header-wrapper {
@@ -132,7 +147,7 @@ html {
   left: 0;
   width: 100%;
   height: 40px;
-  background-color: #FFF;
+  background-color: #FFFFFF;
   content: "";
   z-index: 1;
 }
@@ -154,15 +169,25 @@ html {
 .user-navigation {
   display: flex;
   width: 230px;
-  margin: 5px 26px;
+  margin: 5px 26px 5px 0;
+}
+
+.user-navigation.login {
+  background: url("../images/icons/user-icon.svg") no-repeat 0 9px;
 }
 
 .user-menu {
   margin: 5px auto;
-  max-width: 240px;
+  padding: 0;
+  max-width: 242px;
   display: flex;
   flex-wrap: wrap;
+  column-gap: 18px;
   list-style-type: none;
+}
+
+.user-menu-item {
+  display: block;
 }
 
 .user-navigation-link.logout-button {
@@ -177,18 +202,30 @@ html {
 }
 
 .compare-products {
-  margin-left: auto;
+  background: url("../images/icons/compare-icon.svg") no-repeat 0 9px;
+}
+
+.compare-button {
+  padding: 0 0 0 22px;
 }
 
 .user-menu-item.cart {
-  margin-left: 18px;
   position: relative;
+  background: url("../images/icons/cart-icon.svg") no-repeat 17px 6px;
+}
+
+.cart-button {
+  padding: 0 0 0 43px;
 }
 
 .cart-button .cart-number {
   display: inline-block;
   min-width: 21px;
   padding: 2px 6px;
+  margin-right: auto;
+  position: absolute;
+  top: 5px;
+  left: 0;
   font-size: 14px;
   line-height: 17px;
   text-align: center;
@@ -264,8 +301,16 @@ html {
 
 .product-list-dropdown-menu {
   display: inline-block;
+  width: 294px;
   padding: 15px 60px 15px 0;
   box-sizing: border-box;
+  background: url(../images/product-list-dropdown-plus.svg) no-repeat 243px 0;
+}
+
+.product-list-container:hover .product-list-dropdown-menu,
+.product-list-container:focus-within .product-list-dropdown-menu,
+.product-list-container:active .product-list-dropdown-menu {
+  background: url(../images/product-list-dropdown-minus.svg) no-repeat 243px 0;
 }
 
 .subcatalog {
@@ -291,16 +336,18 @@ html {
 }
 
 .product-list-container:hover .subcatalog,
-.product-list-container:focus-within + .subcatalog,
-.product-list-container:active + .subcatalog {
+.product-list-container:focus-within .subcatalog,
+.product-list-container:active .subcatalog {
   display: block;
 }
 
 .subcatalog-list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.subcatalog .subcatalog-list:not(:last-child) {
+.subcatalog-list:not(:last-child) {
   margin-right: 60px;
 }
 
@@ -409,7 +456,36 @@ html {
   margin: 50px 0;
   padding: 10px 5px;
   width: 220px;
+  position: relative;
 }
+
+.product-info::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #FFE17F;
+  z-index: -1;
+}
+
+.product-info:hover {
+  background-color: #FFE17F;
+}
+
+.product-info:active {
+  background-color: #FFCC33;
+}
+
+.product-info:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.product-info:disabled {
+  opacity: 0.3;
+}
+
 
 .product-info,
 .services-button,
@@ -494,7 +570,7 @@ html {
   border: none;
   position: absolute;
   top: 211px;
-  left: 170px;
+  left: 30px;
   cursor: pointer;
 }
 
@@ -507,7 +583,7 @@ html {
   transform: rotate(180deg);
   position: absolute;
   top: 211px;
-  left: 680px;
+  left: 540px;
   cursor: pointer;
 }
 
@@ -546,15 +622,76 @@ html {
 
 .product-category-item {
   width: 160px;
+  padding: 0;
+  margin: 0;
   position: relative;
 }
 
+.product-category-link {
+  padding: 192px 0 0 0;
+}
+
+.product-category-item::before {
+  content: "";
+  width: 160px;
+  height: 160px;
+  background-color: #FFE17F;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 .product-category-list h3 {
+  margin: 0;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 800;
   letter-spacing: -0.02em;
+  text-align: start;
+}
+
+.virtual-reality {
+  display: block;
+  background: url("../images/product-category-virtual-reality.svg") no-repeat 32px 53px;
+}
+
+.selfie-monopods {
+  display: block;
+  background: url("../images/product-category-selfie-monopods.svg") no-repeat 37px 43px;
+}
+
+.action-cameras {
+  display: block;
+  background: url("../images/product-category-action-cameras.svg") no-repeat 44px 36px;
+}
+
+.fitness-bracelets {
+  display: block;
+  background: url("../images/product-category-fitness-bracelets.svg") no-repeat 26px 46px;
+}
+
+.smartwatches {
+  display: block;
+  background: url("../images/product-category-smartwatches.svg") no-repeat 52px 31px;
+}
+
+.quadcopters {
+  display: block;
+  background: url("../images/product-category-quadcopters.svg") no-repeat 14px 45px;
+}
+
+.product-category-item:hover.product-category-item::before {
+  background-color: #FFC700;
+}
+
+.product-category-item:active {
+  opacity: 0.3;
+}
+
+.product-category-link:focus {
+  outline: 2px solid #AF4FFF;
 }
 
 .services-info {
@@ -614,11 +751,25 @@ html {
 
 .services-info-item {
   width: 873px;
+  padding: 10px 0;
   flex-shrink: 0;
 }
 
+.services-delivery {
+  background: url("../images/services-delivery.svg") no-repeat 558px 10px;
+}
+
+.services-guarantee {
+  background: url("../images/services-guarantee.svg") no-repeat 558px 4px;
+}
+
+.services-credit {
+  background: url("../images/services-credit.svg") no-repeat 573px 4px;
+}
+
 .services-info-text {
-  margin: 0 390px 0 0;
+  margin: 0 auto 0 0;
+  padding: 0 372px 0 0;
 }
 
 .services-info-heading {
@@ -658,11 +809,38 @@ html {
 .special-order-link::before {
   width: 125px;
   height: 100px;
-  background-color: #FFE17F;
+  background: #FFE17F url("../images/special-delivery.svg") no-repeat 39px 35px;
   position: absolute;
   top: 0;
   left: 0;
   content: "";
+}
+
+.special-order-link::after {
+  width: 125px;
+  height: 100px;
+  background: transparent url("../images/special-delivery-info.svg") no-repeat 42px 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  opacity: 0.3;
+}
+
+.special-order-link:hover::before {
+  background-color: #FFC700;
+}
+
+.special-order-link:hover::after {
+  opacity: 1;
+}
+
+.special-order-link:active {
+  opacity: 0.3;
+}
+
+.special-order-link:focus {
+  outline: 2px solid #AF4FFF;
 }
 
 .company-info-container {
@@ -743,11 +921,40 @@ html {
 .contacts-button {
   display: inline-block;
   margin-top: 30px;
-  padding: 10px 6px;
+  padding: 10px 32px;
+  position: relative;
 }
 
 .contacts-button.about-us {
   margin-top: 11px;
+  padding: 10px 22px;
+}
+
+.contacts-button::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #FFE17F;
+  z-index: -1;
+}
+
+.contacts-button:hover {
+  background-color: #FFE17F;
+}
+
+.contacts-button:active {
+  background-color: #FFCC33;
+}
+
+.contacts-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.contacts-button:disabled {
+  opacity: 0.3;
 }
 
 .company-info-subheading {
@@ -787,9 +994,10 @@ html {
 .subscription-text-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 144px;
+  gap: 30px 252px;
 }
 
 .subscription-text {
@@ -834,6 +1042,8 @@ html {
 
 .subscription-form-container span {
   margin-left: auto;
+  padding: 0 0 0 32px;
+  background: url("../images/subscription-tick.svg") no-repeat 0 7px;
 }
 
 .page-footer,
