@@ -94,6 +94,12 @@ html {
   border-right: none;
   border-radius: 50px 0 0 50px;
   background: url("../images/icons/search-icon.svg") no-repeat 16px 12px;
+  position: relative;
+}
+
+.search-field .field:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .search-field .field:placeholder-shown {
@@ -118,6 +124,11 @@ html {
 .search-field .search-button:hover {
   background-color: #000000;
   color: #FFFFFF;
+}
+
+.search-field .search-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .search-field .search-button:active {
@@ -153,7 +164,7 @@ html {
 }
 
 .navigation-page-logo {
-  display: block;
+  display: inline-block;
   margin-bottom: 30px;
   position: relative;
   z-index: 10;
@@ -304,13 +315,41 @@ html {
   width: 294px;
   padding: 15px 60px 15px 0;
   box-sizing: border-box;
-  background: url(../images/product-list-dropdown-plus.svg) no-repeat 243px 0;
+  position: relative;
+  z-index: 10;
 }
 
-.product-list-container:hover .product-list-dropdown-menu,
-.product-list-container:focus-within .product-list-dropdown-menu,
-.product-list-container:active .product-list-dropdown-menu {
-  background: url(../images/product-list-dropdown-minus.svg) no-repeat 243px 0;
+.product-list-dropdown-menu::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  background: url("../images/navigation-dropdown-plus.svg") no-repeat center;
+  opacity: 0.3;
+  box-sizing: border-box;
+}
+
+.product-list-dropdown-menu:hover::before {
+  background: url("../images/navigation-dropdown-minus.svg") no-repeat center;
+  opacity: 1;
+}
+
+.product-list-dropdown-menu:focus::before {
+  background: url("../images/navigation-dropdown-minus.svg") no-repeat center;
+  opacity: 0.3;
+}
+
+.product-list-dropdown-menu:active::before {
+  background: url("../images/navigation-dropdown-minus.svg") no-repeat center;
+  opacity: 1;
+}
+
+.product-list-dropdown-menu:focus {
+  outline: 2px solid #AF4FFF;
 }
 
 .subcatalog {
@@ -514,14 +553,6 @@ html {
 .footer-services-link {
   text-align: center;
   box-sizing: border-box;
-}
-
-.service-info-active .services-button {
-  color: #FFE17F;
-}
-
-.service-info-active {
-  background-color: #000;
 }
 
 .product-info-container {
@@ -735,7 +766,7 @@ html {
   content: "";
   background-color: #000;
   bottom: -65px;
-  right: 0;
+  right: -7px;
 }
 
 .services-info-text-container {
@@ -780,10 +811,100 @@ html {
   margin: 0 0 35px;
 }
 
-.services-button {
+.services-info-list .services-button {
   display: inline-block;
-  padding: 9px 120px 11px 18px;
+  width: 160px;
+  padding: 10px 4px;
   box-sizing: border-box;
+  position: relative;
+  z-index: 10;
+}
+
+.services-button::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #FFE17F;
+  z-index: -1;
+}
+
+.services-button:hover:not(.services-button-active) {
+  width: 280px;
+  background-color: #000000;
+  color: #FFE17F;
+  padding-left: 60px;
+  text-align: left;
+}
+
+.services-button:focus:not(.services-button-active) {
+  width: 280px;
+  padding-left: 60px;
+  background-color: #000000;
+  color: #FFE17F;
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+  text-align: left;
+}
+
+.services-button:focus:not(:focus-visible):not(.services-button-active) {
+  outline: transparent;
+}
+
+.services-button:focus-visible:not(.services-button-active) {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.services-button:active:not(.services-button-active) {
+  width: 280px;
+  background-color: #000000;
+  color: #FFE17F;
+  padding-left: 60px;
+  text-align: left;
+}
+
+.services-button:hover::before,
+.services-button:focus::before,
+.services-button:active::before {
+  display: none;
+}
+
+.services-button-active.services-button::before {
+  display: none;
+}
+
+.services-info-list .services-button-active {
+  width: 280px;
+  padding: 9px 34px 11px;
+  color: #FFE17F;
+  background-color: #000000;
+  text-align: left;
+}
+
+.services-info-list .services-button-active:hover {
+  padding-left: 60px;
+}
+
+.services-info-list .services-button-active:focus {
+  padding-left: 60px;
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.services-info-list .services-button-active:focus:not(:focus-visible) {
+  outline: transparent;
+}
+
+.services-info-list .services-button-active:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.services-info-list .services-button-active:active {
+  padding-left: 60px;
 }
 
 .special-order-container {
@@ -841,6 +962,7 @@ html {
 
 .special-order-link:focus {
   outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .company-info-container {
@@ -1096,7 +1218,6 @@ html {
 
 .footer-services-link {
   display: inline-block;
-  padding: 6px;
 }
 
 .footer-contacts-phone {
@@ -1104,9 +1225,36 @@ html {
   flex-shrink: 0;
 }
 
-.footer-phone {
+.footer-middle .footer-phone {
   display: inline-block;
-  padding: 6px;
+  text-decoration: underline;
+}
+
+.footer-services-link:hover,
+.footer-phone:hover {
+  color: #FFC700;
+}
+
+.footer-services-link:focus,
+.footer-phone:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.footer-services-link:focus:not(:focus-visible),
+.footer-phone:focus:not(:focus-visible) {
+  outline: transparent;
+}
+
+.footer-services-link:focus-visible,
+.footer-phone:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.footer-services-link:active,
+.footer-phone:active {
+  opacity: 0.3;
 }
 
 .footer-bottom {
@@ -1155,6 +1303,40 @@ html {
   height: 40px;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.social-item-button {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.social-item-button:hover {
+  background-color: #FFC700;
+  border-radius: 50%;
+}
+
+.social-item-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.social-item-button:focus:not(:focus-visible) {
+  outline: transparent;
+}
+
+.social-item-button:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.social-item:active {
+  background-color: #FFC700;
+}
+
+.social-item-button:active {
+  opacity: 0.3;
 }
 
 .telegram {
@@ -1176,6 +1358,28 @@ html {
   max-width: 190px;
   margin: 0 0 0 70px;
   padding: 0;
+}
+
+.developer-logo-icon:hover {
+  fill: #FFFFFF;
+}
+
+.developer-logo:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 1px;
+}
+
+.developer-logo:focus:not(:focus-visible) {
+  outline: transparent;
+}
+
+.developer-logo:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.developer-logo-icon:active {
+  opacity: 0.3;
 }
 
 /*MODAL WINDOW*/
