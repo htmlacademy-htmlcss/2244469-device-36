@@ -16,12 +16,13 @@
           </a>
           <nav class="site-navigation">
             <form class="search-field" action="https://echo.htmlacademy.ru/" method="get">
-              <input class="field" type="search" name="search" placeholder="Поиск по сайту"
+              <input class="field" type="search" id="search-field" name="field" placeholder="Поиск по сайту"
                 aria-label="Поле поиска по сайту" required>
+              <label class="search-field-label" for="search-field" name="search-field"></label>
               <button class="search-button" type="submit">Найти</button>
             </form>
             <div class="user-navigation login">
-              <a class="user-navigation-link login-button" href="#">Войти</a>
+              <a class="user-navigation-link login-button unauthorized" href="#">Войти</a>
             </div>
             <ul class="navigation-list user-menu">
               <li class="user-menu-item compare-products">
@@ -68,26 +69,26 @@
               <div class="subcatalog">
                 <div class="subcatalog-container">
                   <ul class="subcatalog-list first-column">
-                    <li class="subcatalog-item active-item">
+                    <li class="subcatalog-item">
                       <a class="subcatalog-link" href="#">Виртуальная реальность</a>
                     </li>
-                    <li class="subcatalog-item active-item">
+                    <li class="subcatalog-item">
                       <a class="subcatalog-link" href="catalog.html">Моноподы для cелфи</a>
                     </li>
-                    <li class="subcatalog-item active-item">
+                    <li class="subcatalog-item">
                       <a class="subcatalog-link" href="#">Экшн-камеры</a>
                     </li>
                   </ul>
                   <ul class="subcatalog-list second-column">
-                    <li class="subcatalog-item active-item">
+                    <li class="subcatalog-item">
                       <a class="subcatalog-link" href="#">Фитнес-браслеты</a>
                     </li>
-                    <li class="subcatalog-item active-item">
+                    <li class="subcatalog-item">
                       <a class="subcatalog-link" href="#">Умные часы</a>
                     </li>
                   </ul>
                   <ul class="subcatalog-list third-column">
-                    <li class="subcatalog-item active-item">
+                    <li class="subcatalog-item">
                       <a class="subcatalog-link" href="#">Квадрокоптеры</a>
                     </li>
                   </ul>
@@ -96,13 +97,13 @@
             </div>
             <div class="main-menu-container">
               <ul class="product-list">
-                <li class="product-list-item active-item">
+                <li class="product-list-item">
                   <a class="product-list-link" href="#">Доставка</a>
                 </li>
-                <li class="product-list-item active-item">
+                <li class="product-list-item">
                   <a class="product-list-link" href="#">Гарантия</a>
                 </li>
-                <li class="product-list-item active-item">
+                <li class="product-list-item">
                   <a class="product-list-link" href="#">Контакты</a>
                 </li>
               </ul>
