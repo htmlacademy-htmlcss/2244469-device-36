@@ -813,12 +813,9 @@ html {
   background-color: #FFE17F;
 }
 
-.product-info:active {
-  background-color: #FFCC33;
-}
-
 .product-info:focus {
   outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .product-info:focus:not(:focus-visible) {
@@ -828,6 +825,10 @@ html {
 .product-info:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
+}
+
+.product-info:active {
+  background-color: #FFCC33;
 }
 
 .product-info:disabled {
@@ -902,6 +903,12 @@ html {
   list-style-type: none;
 }
 
+.slider-dots-button {
+  display: block;
+  width: 12px;
+  height: 12px;
+}
+
 .slider-image-arrow.previous {
   width: 20px;
   height: 60px;
@@ -939,10 +946,60 @@ html {
   border-radius: 50%;
   box-sizing: border-box;
   cursor: pointer;
+  position: relative;
 }
 
-.dots-button-active .dots {
+.dots-active {
   background-color: #000;
+}
+
+.dots::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: -1px;
+  left: -1px;
+}
+
+.slider-image-arrow:hover,
+.dots:hover,
+.dots-active:hover {
+  opacity: 0.6;
+}
+
+.slider-image-arrow:focus{
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.slider-image-arrow:focus:not(:focus-visible) {
+  outline: transparent;
+}
+
+.slider-image-arrow:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.dots:focus::before {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.dots:focus:not(:focus-visible)::before {
+  outline: transparent;
+}
+
+.dots:focus-visible::before {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.slider-image-arrow:active,
+.dots:active,
+.dots-active:active {
+  opacity: 0.3;
 }
 
 .product-category {
