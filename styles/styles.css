@@ -55,6 +55,7 @@ html {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  min-width: 1160px;
 }
 
 .content-wrapper {
@@ -528,18 +529,6 @@ html {
   position: relative;
 }
 
-.product-list-container::before {
-  content: "";
-  width: 1160px;
-  height: 200px;
-  background-color: #FFFFFF;
-  position: absolute;
-  bottom: -5px;
-  left: -60px;
-  z-index: 1;
-  display: none;
-}
-
 .product-list-dropdown-menu {
   display: inline-block;
   width: 294px;
@@ -796,16 +785,16 @@ html {
   margin: 15px 0 29px;
 }
 
-.product-info {
-  margin: 50px 0;
+.yellow-button {
+  display: inline-block;
   padding: 10px 5px;
-  width: 220px;
   position: relative;
   text-decoration: none;
   color: #000000;
+  box-sizing: border-box;
 }
 
-.product-info::before {
+.yellow-button::before {
   content: "";
   position: absolute;
   top: 16px;
@@ -816,32 +805,41 @@ html {
   z-index: -1;
 }
 
-.product-info:hover {
+.product-info {
+  margin: 50px 0;
+  width: 220px;
+}
+
+.yellow-button:hover {
   background-color: #FFE17F;
 }
 
-.product-info:focus {
+.yellow-button:focus {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
 
-.product-info:focus:not(:focus-visible) {
+.yellow-button:focus:not(:focus-visible) {
   outline: transparent;
 }
 
-.product-info:focus-visible {
+.yellow-button:focus-visible {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
 
-.product-info:active {
+.yellow-button:active {
   background-color: #FFCC33;
 }
 
-.product-info:disabled {
+.yellow-button:disabled {
   opacity: 0.3;
 }
 
+.yellow-button:hover::before,
+.yellow-button:active::before {
+  display: none;
+}
 
 .product-info,
 .product-details,
@@ -1130,6 +1128,7 @@ html {
   width: 1160px;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 
 .services-info::before {
@@ -1168,7 +1167,6 @@ html {
   width: 873px;
   margin: auto 0;
   padding: 0;
-  overflow: hidden;
   box-sizing: border-box;
   list-style-type: none;
 }
@@ -1177,6 +1175,11 @@ html {
   width: 873px;
   padding: 10px 0;
   flex-shrink: 0;
+  display: none;
+}
+
+.services-active {
+  display: block;
 }
 
 .services-delivery {
@@ -1205,66 +1208,10 @@ html {
 }
 
 .services-button {
-  display: inline-block;
   width: 160px;
   padding: 10px 4px;
   position: relative;
-  text-decoration: none;
-  color: #000000;
-  box-sizing: border-box;
   z-index: 10;
-}
-
-.services-button::before {
-  content: "";
-  position: absolute;
-  top: 16px;
-  left: 0;
-  width: 100%;
-  height: 8px;
-  background-color: #FFE17F;
-  z-index: -1;
-}
-
-.services-button:hover:not(.services-button-active) {
-  width: 280px;
-  background-color: #000000;
-  color: #FFE17F;
-  padding-left: 60px;
-  text-align: left;
-}
-
-.services-button:focus:not(.services-button-active) {
-  width: 280px;
-  padding-left: 60px;
-  background-color: #000000;
-  color: #FFE17F;
-  outline: 2px solid #AF4FFF;
-  outline-offset: 2px;
-  text-align: left;
-}
-
-.services-button:focus:not(:focus-visible):not(.services-button-active) {
-  outline: transparent;
-}
-
-.services-button:focus-visible:not(.services-button-active) {
-  outline: 2px solid #AF4FFF;
-  outline-offset: 2px;
-}
-
-.services-button:active:not(.services-button-active) {
-  width: 280px;
-  background-color: #000000;
-  color: #FFE17F;
-  padding-left: 60px;
-  text-align: left;
-}
-
-.services-button:hover::before,
-.services-button:focus::before,
-.services-button:active::before {
-  display: none;
 }
 
 .services-button-active.services-button::before {
@@ -1281,12 +1228,17 @@ html {
 
 .services-button-active:hover {
   padding-left: 60px;
+  color: #FFE17F;
+  background-color: #000000;
+  text-align: left;
+  transition: padding 0.5s;
 }
 
 .services-button-active:focus {
   padding-left: 60px;
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
+  transition: padding 0.5s;
 }
 
 .services-button-active:focus:not(:focus-visible) {
@@ -1453,53 +1405,14 @@ html {
 }
 
 .contacts-button {
-  display: inline-block;
   margin-top: 30px;
   padding: 10px 32px;
   position: relative;
-  text-decoration: none;
-  color: #000000;
 }
 
 .about-us {
   margin-top: 11px;
   padding: 10px 22px;
-}
-
-.contacts-button::before {
-  content: "";
-  position: absolute;
-  top: 16px;
-  left: 0;
-  width: 100%;
-  height: 8px;
-  background-color: #FFE17F;
-  z-index: -1;
-}
-
-.contacts-button:hover {
-  background-color: #FFE17F;
-}
-
-.contacts-button:active {
-  background-color: #FFCC33;
-}
-
-.contacts-button:focus {
-  outline: 2px solid #AF4FFF;
-}
-
-.contacts-button:focus:not(:focus-visible) {
-  outline: transparent;
-}
-
-.contacts-button:focus-visible {
-  outline: 2px solid #AF4FFF;
-  outline-offset: 2px;
-}
-
-.contacts-button:disabled {
-  opacity: 0.3;
 }
 
 .company-info-subheading {
@@ -1677,15 +1590,25 @@ html {
   padding: 0;
 }
 
+.footer-address-text:not(:last-child),
+.footer-middle .footer-phone:not(:last-child),
+.developer-logo:not(:last-child) {
+  margin-bottom: 15px;
+}
+
 .footer-services-list {
   display: flex;
-  max-width: 520px;
-  justify-content: flex-start;
+  width: 446px;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 15px 23px;
+  gap: 15px 35px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.footer-services-item {
+  display: inline-block;
 }
 
 .footer-services-link {
@@ -1693,8 +1616,9 @@ html {
 }
 
 .footer-contacts-phone {
-  max-width: 200px;
+  width: 200px;
   flex-shrink: 0;
+  text-align: end;
 }
 
 .footer-middle .footer-phone {
@@ -1755,19 +1679,11 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 300px;
+  width: 152px;
   gap: 15px;
   padding: 0;
   margin: 0 auto;
   list-style-type: none;
-}
-
-.social-item:first-child {
-  margin-left: auto;
-}
-
-.social-item:last-child {
-  margin-right: auto;
 }
 
 .social-item {
@@ -1827,7 +1743,7 @@ html {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
-  max-width: 190px;
+  width: 200px;
   margin: 0 0 0 70px;
   padding: 0;
 }
@@ -2343,12 +2259,12 @@ html {
 
 .catalog-filter-group-title::before {
   content: "";
-  width: 200px;
-  height: 2px;
+  width: 220px;
+  height: 1px;
   position: absolute;
   left: 0;
   top: -16px;
-  background-color: #000000;
+  border-top: 2px solid #000000;
 }
 
 .catalog-filter-list span {
