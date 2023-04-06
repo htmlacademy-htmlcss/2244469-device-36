@@ -1762,17 +1762,17 @@ html {
 
 /*MODAL WINDOW*/
 
-.modal-container.modal-container-close {
-  display: none;
-}
-
 .modal-container {
-  display: flex;
+  display: none;
   width: 100%;
   height: 100%;
   position: fixed;
   background-color: rgba(240, 240, 240, 0.9);
   z-index: 20;
+}
+
+.modal-container-open {
+  display: flex;
 }
 
 .modal-window {
