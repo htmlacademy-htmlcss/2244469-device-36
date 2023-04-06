@@ -7,7 +7,7 @@ if (specialOrderLink) {
     importantEvent.preventDefault();
     modal.classList.add('modal-container-open');
   });
-  modalCloseButton.addEventListener('click', function(importantEvent) {
+  modalCloseButton.addEventListener('click', function (importantEvent) {
     modal.classList.remove('modal-container-open');
   });
 }
