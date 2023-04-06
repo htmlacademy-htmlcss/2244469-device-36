@@ -2235,7 +2235,7 @@ html {
 }
 
 .catalog-filter-container {
-  padding: 25px 40px 25px 60px;
+  padding: 25px 60px;
 }
 
 .catalog-filter fieldset {
@@ -2286,19 +2286,28 @@ html {
   width: 100%;
   height: 18px;
   position: relative;
-  border-bottom: 2px solid #DCDCDC;
-  box-sizing: border-box;
-  cursor: pointer;
   margin: 0 0 12px 0;
 }
 
 .range-bar {
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 9px;
+  left: 0;
+  background-color: #DCDCDC;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.range-bar::before {
+  content: "";
   width: 119px;
-  height: 18px;
+  height: 2px;
   position: absolute;
   top: 0;
   left: 0;
-  border-bottom: 2px solid #000000;
+  background-color: #000000;
   box-sizing: border-box;
   cursor: pointer;
 }
@@ -2309,7 +2318,7 @@ html {
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 50%;
+  top: -9px;
   border-radius: 50%;
   border: 2px solid #000000;
   background-color: #EBEBEB;
@@ -2414,7 +2423,6 @@ html {
   border-color: #000000;
   background: url("../images/filter-checkmark.svg") no-repeat center;
 }
-
 
 
 
