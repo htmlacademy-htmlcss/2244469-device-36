@@ -1189,8 +1189,12 @@ html {
   margin-bottom: 34px;
 }
 
+.services-info-title {
+  margin-left: 4px;
+}
+
 .services-info-title:not(:last-child)  {
-  margin: 0 0 35px;
+  margin-bottom: 35px;
 }
 
 .services-button {
