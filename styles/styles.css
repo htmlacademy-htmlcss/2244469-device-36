@@ -1075,7 +1075,7 @@ html {
 }
 
 .product-category-link {
-  min-height: 240px;
+  height: 100%;
   padding: 192px 0 0 0;
   text-decoration: none;
   color: #000000;
