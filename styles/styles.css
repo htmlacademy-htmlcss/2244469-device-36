@@ -1691,17 +1691,20 @@ html {
   color: #FFC700;
 }
 
+.contacts-phone:focus,
 .footer-services-link:focus,
 .footer-phone:focus {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
 
+.contacts-phone:focus:not(:focus-visible),
 .footer-services-link:focus:not(:focus-visible),
 .footer-phone:focus:not(:focus-visible) {
   outline: transparent;
 }
 
+.contacts-phone:focus-visible,
 .footer-services-link:focus-visible,
 .footer-phone:focus-visible {
   outline: 2px solid #AF4FFF;
