@@ -375,8 +375,8 @@ html {
   box-sizing: border-box;
   font-size: 16px;
   line-height: 20px;
-  background-color: #000;
-  color: #FFF;
+  background-color: #000000;
+  color: #FFFFFF;
   border-bottom: 1px solid transparent;
 }
 
@@ -428,7 +428,7 @@ html {
 
 .cart-item-name {
   margin: 0 auto 0 23px;
-  color: #FFF;
+  color: #FFFFFF;
 }
 
 .purchase-total-info {
@@ -448,7 +448,7 @@ html {
   width: 280px;
   margin: 21px 20px 20px;
   padding: 14px 23px;
-  background-color: #FFF;
+  background-color: #FFFFFF;
   box-sizing: border-box;
   text-align: center;
 }
@@ -525,7 +525,7 @@ html {
 .product-list-container,
 .main-menu-container,
 .open-cart-button {
-  color: #000;
+  color: #000000;
 }
 
 .product-list-container,
@@ -574,7 +574,7 @@ html {
 }
 
 .product-list-container:focus-within .product-list-dropdown-menu:focus::before {
-  background: url("../images/navigation-dropdown-plus.svg") no-repeat center;
+  background: url("../images/navigation-dropdown-minus.svg") no-repeat center;
   opacity: 0.3;
 }
 
@@ -746,7 +746,7 @@ html {
   font-size: 180px;
   line-height: 192px;
   font-weight: 700;
-  color: #FFF;
+  color: #FFFFFF;
   background-color: #FFE17F;
   box-sizing: border-box;
   z-index: -1;
@@ -816,7 +816,7 @@ html {
   font-size: 50px;
   line-height: 50px;
   font-weight: 800;
-  color: #000;
+  color: #000000;
 }
 
 .slider-text-heading {
@@ -1415,7 +1415,7 @@ html {
   line-height: 20px;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #000;
+  color: #000000;
 }
 
 .delivery-companies-list {
@@ -1869,8 +1869,8 @@ html {
   margin: auto;
   padding: 62px 70px;
   box-sizing: border-box;
-  background-color: #FFF;
-  border: 10px solid #000;
+  background-color: #FFFFFF;
+  border: 10px solid #000000;
   box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -2205,7 +2205,7 @@ html {
   position: absolute;
   top: 33px;
   right: -67px;
-  background-color: #000;
+  background-color: #000000;
   color: #FFFFFF;
   box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
   z-index: 30;
@@ -2322,7 +2322,7 @@ html {
 .catalog-sorting p {
   font-size: 16px;
   line-height: 19px;
-  color: #000;
+  color: #000000;
 }
 
 .catalog-filter-container h2 {
@@ -2377,7 +2377,7 @@ html {
 }
 
 .catalog-filter-list span {
-  color: #000;
+  color: #000000;
 }
 
 .price-container {
@@ -2574,9 +2574,8 @@ html {
 }
 
 .filter-radio:checked + .radio-button-label::before {
-  display: block;
-  border-color: #000000;
-  background: url("../images/radio-button-checkmark.svg") no-repeat center;
+  background: url("../images/radio-button-checkmark.svg") no-repeat 50%;
+  background-size: 8px 8px;
 }
 
 .checkbox-label::after,
@@ -2708,7 +2707,7 @@ html {
   font-size: 18px;
   line-height: 30px;
   font-weight: 400;
-  color: #000;
+  color: #000000;
   background-color: #F0F0F0;
   border: none;
   cursor: pointer;
