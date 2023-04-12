@@ -237,7 +237,7 @@ html {
 }
 
 .navigation-page-logo {
-  display: block;
+  display: inline-block;
   margin: 0 0 23px 0;
   position: relative;
   z-index: 20;
@@ -619,7 +619,6 @@ html {
   text-transform: none;
   letter-spacing: normal;
   background-color: #FFE17F;
-  z-index: 10;
   column-gap: 60px;
 }
 
