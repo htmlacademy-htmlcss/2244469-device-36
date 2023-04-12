@@ -231,6 +231,11 @@ html {
   z-index: 1;
 }
 
+.main-page-header {
+  padding-bottom: 0;
+  margin-bottom: 18px;
+}
+
 .navigation-page-logo {
   display: block;
   margin: 0 0 23px 0;
@@ -2249,11 +2254,11 @@ html {
 .catalog-header {
   width: 1100px;
   margin: 0 auto;
-  padding: 35px 0 34px 60px;
+  padding: 36px 0 34px 60px;
 }
 
 .catalog-page h1 {
-  margin: 0 0 12px;
+  margin: 0 0 10px;
 }
 
 .breadcrumbs {
@@ -2507,13 +2512,17 @@ html {
 }
 
 .catalog-filter-middle {
-  margin: 45px 0 39px;
+  margin: 48px 0 38px;
 }
 
 .catalog-filter-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.catalog-filter-list .visually-hidden {
+  top: 10px;
 }
 
 .catalog-filter-color {
