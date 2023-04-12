@@ -76,7 +76,7 @@ html {
 }
 
 .search-field {
-  margin: 0 26px 34px 0;
+  margin: 0 26px 31px 0;
   padding: 0;
   display: flex;
   width: 517px;
@@ -215,7 +215,7 @@ html {
 
 .header-wrapper {
   position: relative;
-  padding: 20px 60px 0;
+  padding: 18px 60px;
   box-sizing: border-box;
   background-color: #FFE17F;
 }
@@ -233,7 +233,7 @@ html {
 
 .navigation-page-logo {
   display: block;
-  margin: 0 0 20px 0;
+  margin: 0 0 23px 0;
   position: relative;
   z-index: 20;
 }
@@ -707,7 +707,7 @@ html {
 
 .welcome {
   width: 1160px;
-  margin: 0 auto 50px;
+  margin: 0 auto 35px;
   position: relative;
 }
 
@@ -715,7 +715,7 @@ html {
   width: 1160px;
   position: relative;
   overflow: hidden;
-  top: -20px;
+  top: -32px;
 }
 
 .slider-list {
@@ -815,7 +815,7 @@ html {
 }
 
 .slider-text-heading {
-  margin: 15px 0 29px;
+  margin: 10px 0 29px;
 }
 
 .yellow-button {
@@ -944,7 +944,7 @@ html {
   list-style-type: none;
   position: absolute;
   left: 542px;
-  bottom: 20px;
+  bottom: 34px;
 }
 
 .slider-dots-button {
@@ -968,7 +968,7 @@ html {
   content: "";
   background: url("../images/slider-arrow-left.svg") no-repeat center;
   position: absolute;
-  top: 192px;
+  top: 176px;
   left: 30px;
 }
 
@@ -981,7 +981,7 @@ html {
   appearance: none;
   transform: rotate(180deg);
   position: absolute;
-  top: 192px;
+  top: 176px;
   left: 540px;
   cursor: pointer;
 }
@@ -1386,7 +1386,7 @@ html {
 }
 
 .company-info-heading {
-  margin-bottom: 48px;
+  margin-bottom: 46px;
 }
 
 .company-info-heading:first-child {
@@ -1510,7 +1510,7 @@ html {
 .newsletter-wrapper {
   width: 1160px;
   margin: 0 auto;
-  padding: 64px 0 28px;
+  padding: 64px 0 26px;
 }
 
 .subscription-text-container {
@@ -1518,19 +1518,19 @@ html {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 138px;
+  margin-bottom: 136px;
   gap: 30px 242px;
 }
 
 .subscription-text {
   width: 542px;
-  padding: 6px 0;
+  padding: 8px 2px;
 }
 
 .subscription-heading {
   width: 350px;
   margin: 0;
-  padding: 0 8px;
+  padding: 0 6px 4px 6px;
 }
 
 .subscription-form-container {
@@ -1666,8 +1666,8 @@ html {
   width: 456px;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 14px 34px;
-  margin: 0 116px 0 82px;
+  gap: 14px 32px;
+  margin: 0 116px 0 76px;
   padding: 0;
   list-style-type: none;
 }
@@ -1688,7 +1688,7 @@ html {
 
 .footer-middle .footer-phone {
   display: inline-block;
-  padding: 8px 0 0 0;
+  padding: 8px 2px;
   color: #FFFFFF;
   background-color: #444444;
   text-decoration: underline;
@@ -1740,7 +1740,7 @@ html {
   height: 7px;
   background-color: #FFC700;
   position: absolute;
-  bottom: 22px;
+  bottom: 20px;
   transform: translateY(50%);
   left: 2px;
   content: "";
@@ -1753,7 +1753,7 @@ html {
   width: 152px;
   gap: 15px;
   padding: 0;
-  margin: 0 auto 0 265px;
+  margin: 0 auto 0 264px;
   list-style-type: none;
 }
 
@@ -2253,7 +2253,7 @@ html {
 }
 
 .catalog-page h1 {
-  margin: 0 0 16px;
+  margin: 0 0 12px;
 }
 
 .breadcrumbs {
@@ -2321,7 +2321,7 @@ html {
 }
 
 .catalog-filter-container h2 {
-  margin: 0 auto 60px 0;
+  margin: 0 auto 74px 0;
 }
 
 .catalog-sorting p {
@@ -2334,29 +2334,41 @@ html {
 }
 
 .catalog-filter-container {
-  padding: 25px 60px;
+  padding: 20px 40px 20px 60px;
 }
 
-.catalog-filter fieldset {
-  margin: 0 0 35px;
+.catalog-filter-top,
+.catalog-filter-middle,
+.catalog-filter-bottom {
+  margin: 0 0 42px;
   padding: 0;
   border: none;
 }
 
+.catalog-filter fieldset:last-of-type {
+  margin-bottom: 22px;
+}
+
 .catalog-filter-container legend {
-  margin: 0 0 20px;
+  margin: 0 0 13px;
   padding: 0;
   position: relative;
 }
 
-.catalog-filter-group-title::before {
+.catalog-filter-top legend::before,
+.catalog-filter-middle legend::before,
+.catalog-filter-bottom legend::before {
   content: "";
-  width: 220px;
+  width: 200px;
   height: 1px;
   position: absolute;
   left: 0;
-  top: -16px;
+  top: -14px;
   border-top: 2px solid #000000;
+}
+
+.catalog-filter-bottom legend::before {
+  top: -14px;
 }
 
 .catalog-filter-list span {
@@ -2368,6 +2380,7 @@ html {
   padding: 0;
   width: 200px;
   position: relative;
+  bottom: -1px;
 }
 
 .price-container input,
@@ -2385,14 +2398,14 @@ html {
   width: 100%;
   height: 18px;
   position: relative;
-  margin: 0 0 3px 0;
+  margin: 0;
 }
 
 .range-bar {
   width: 100%;
   height: 2px;
   position: absolute;
-  top: 9px;
+  top: 12px;
   left: 0;
   background-color: #DCDCDC;
   box-sizing: border-box;
@@ -2435,11 +2448,11 @@ html {
 }
 
 .toggle-min {
-  left: 0;
+  left: -10px;
 }
 
 .toggle-max {
-  left: 101px;
+  left: 110px;
 }
 
 .range-toggle:hover {
@@ -2466,27 +2479,35 @@ html {
 
 .input-area-label {
   position: absolute;
-  bottom: 4px;
+  bottom: 5px;
 }
 
 .input-label-min {
-  left: 0;
+  left: -13px;
 }
 
 .input-label-max {
-  left: 84px;
+  left: 90px;
 }
 
 .price {
-  padding: 0 0 0 20px;
+  padding: 0 0 0 6px;
   width: 80px;
   appearance: none;
   box-sizing: border-box;
 }
 
+.max-input {
+  padding: 0 0 0 26px;
+}
+
 .price:focus {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
+}
+
+.catalog-filter-middle {
+  margin: 45px 0 39px;
 }
 
 .catalog-filter-list {
@@ -2495,15 +2516,30 @@ html {
   list-style-type: none;
 }
 
+.catalog-filter-color {
+  margin: 0 0 7px 0;
+  padding: 0;
+}
+
+.catalog-filter-item {
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
 .checkbox-label,
 .radio-button-label {
   display: inline-block;
   padding: 0 0 0 36px;
+  margin: 0;
   position: relative;
   font-size: 16px;
   line-height: 20px;
   color: #000000;
   cursor: pointer;
+}
+
+.radio-button-label:not(:last-of-type) {
+  margin-bottom: 20px;
 }
 
 .checkbox-label::before,
@@ -2648,7 +2684,7 @@ html {
 .catalog-sorting {
   display: flex;
   align-items: center;
-  padding: 25px 40px;
+  padding: 16px 40px;
 }
 
 .sorting-container {
@@ -2746,7 +2782,7 @@ html {
 }
 
 .product-card-image {
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   object-fit: contain;
 }
 
@@ -2754,6 +2790,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: baseline;
   gap: 10px;
 }
 
