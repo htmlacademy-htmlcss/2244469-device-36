@@ -414,6 +414,11 @@ html {
   position: relative;
 }
 
+.cart-item-image {
+  width: 39px;
+  object-fit: contain;
+}
+
 .cart-item-delete-button {
   width: 12px;
   height: 12px;
@@ -733,6 +738,11 @@ html {
 
 .slider-item {
   display: flex;
+}
+
+.slider-image {
+  width: 560px;
+  object-fit: contain;
 }
 
 .slider-item::before {
