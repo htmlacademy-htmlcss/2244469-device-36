@@ -104,3 +104,15 @@ if (sliderList) {
     render();
   });
 }
+
+
+servicesLinksList.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  if (evt.target.classList.contains('services-button')) {
+    const index = Array.from(servicesLinks).indexOf(evt.target.closest('li'));
+    document.querySelector('.services-button-active').classList.remove('services-button-active');
+    evt.target.classList.add('services-button-active');
+    document.querySelector('.services-active').classList.remove('services-active');
+    Array.from(servicesScreens)[index].classList.add('services-active');
+  }
+});
