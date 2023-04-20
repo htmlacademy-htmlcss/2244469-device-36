@@ -9,10 +9,14 @@ const sliderList = document.querySelector('.slider-list');
 const sliderDotTemplate = document.querySelector('.slider-dots-button');
 const sliderItems = document.querySelectorAll('.slider-item');
 
-
 const servicesLinksList = document.querySelector('.services-info-list');
 const servicesLinks = document.querySelectorAll('.services-info-title');
 const servicesScreens = document.querySelectorAll('.services-info-item');
+
+const itemsNumberInput = document.querySelector('.items-number');
+const itemsNumberButtonMinus = document.querySelector('.minus-left');
+const itemsNumberButtonPlus = document.querySelector('.plus-right');
+
 
 if (specialOrderLink) {
   specialOrderLink.addEventListener('click', function (importantEvent) {
@@ -105,7 +109,6 @@ if (sliderList) {
   });
 }
 
-
 servicesLinksList.addEventListener('click', (evt) => {
   evt.preventDefault();
   if (evt.target.classList.contains('services-button')) {
@@ -116,3 +119,15 @@ servicesLinksList.addEventListener('click', (evt) => {
     Array.from(servicesScreens)[index].classList.add('services-active');
   }
 });
+
+
+if (itemsNumberInput) {
+  itemsNumberButtonMinus.addEventListener('click', () => {
+    if (itemsNumberInput.value > 1) {
+      itemsNumberInput.value--;
+    }
+  });
+  itemsNumberButtonPlus.addEventListener('click', () => {
+    itemsNumberInput.value++;
+  });
+}
