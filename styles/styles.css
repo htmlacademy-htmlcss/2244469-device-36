@@ -27,13 +27,12 @@
   width: 1px;
   height: 1px;
   margin: -1px;
-  padding: 0;
   border: 0;
+  padding: 0;
   white-space: nowrap;
   -webkit-clip-path: inset(100%);
           clip-path: inset(100%);
-  -webkit-clip-path: rect(0,0,0,0);
-          clip-path: rect(0,0,0,0);
+  clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
@@ -1181,6 +1180,7 @@ html {
   padding-bottom: 73px;
   margin-bottom: 70px;
   position: relative;
+  overflow: hidden;
 }
 
 .services-content {
@@ -2585,10 +2585,6 @@ input[type="number"] {
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.catalog-filter-list .visually-hidden {
-  top: 10px;
 }
 
 .catalog-filter-color {

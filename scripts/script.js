@@ -90,7 +90,6 @@ if (sliderList) {
     const previous = index - 1 > 0 ? index - 1 : 0;
     setActiveElement(previous);
     render();
-    console.log('previous', model);
   });
 
   next.addEventListener('click', () => {
@@ -98,28 +97,28 @@ if (sliderList) {
     const next = index + 1 < model.length ? index + 1 : model.length - 1;
     setActiveElement(next);
     render();
-    console.log('next', model);
   });
 
   sliderDots.addEventListener('click', (evt) => {
+    const sliderDotsItems = document.querySelectorAll('.slider-dots-button');
     const index = Array.from(sliderDotsItems).indexOf(evt.target.closest('li'));
-    console.log('----', index);
     setActiveElement(index);
     render();
   });
 }
 
-servicesLinksList.addEventListener('click', (evt) => {
-  evt.preventDefault();
-  if (evt.target.classList.contains('services-button')) {
-    const index = Array.from(servicesLinks).indexOf(evt.target.closest('li'));
-    document.querySelector('.services-button-active').classList.remove('services-button-active');
-    evt.target.classList.add('services-button-active');
-    document.querySelector('.services-active').classList.remove('services-active');
-    Array.from(servicesScreens)[index].classList.add('services-active');
-  }
-});
-
+if (servicesLinksList) {
+  servicesLinksList.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    if (evt.target.classList.contains('services-button')) {
+      const index = Array.from(servicesLinks).indexOf(evt.target.closest('li'));
+      document.querySelector('.services-button-active').classList.remove('services-button-active');
+      evt.target.classList.add('services-button-active');
+      document.querySelector('.services-active').classList.remove('services-active');
+      Array.from(servicesScreens)[index].classList.add('services-active');
+    }
+  });
+}
 
 if (itemsNumberInput) {
   itemsNumberButtonMinus.addEventListener('click', () => {
