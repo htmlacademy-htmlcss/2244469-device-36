@@ -17,98 +17,102 @@
               alt="Логотип интернет-магазина Девайс.">
           </a>
           <nav class="site-navigation">
-            <form class="search-field" action="https://echo.htmlacademy.ru/" method="get">
-              <input class="field" type="search" id="search-field" name="field" placeholder="Поиск по сайту"
-                aria-label="Поле поиска по сайту" required>
-              <label class="search-field-label" for="search-field"></label>
-              <button class="search-button" type="submit">Найти</button>
-            </form>
-            <div class="user-navigation login">
-              <a class="user-navigation-link login-button unauthorized" href="#">Войти</a>
+            <div class="site-navigation-wrapper-up">
+              <form class="search-field" action="https://echo.htmlacademy.ru/" method="get">
+                <input class="field" type="search" id="search-field" name="field" placeholder="Поиск по сайту"
+                  aria-label="Поле поиска по сайту" required>
+                <label class="search-field-label" for="search-field"></label>
+                <button class="search-button" type="submit">Найти</button>
+              </form>
+              <div class="user-navigation login">
+                <a class="user-navigation-link login-button unauthorized" href="#">Войти</a>
+              </div>
+              <ul class="navigation-list user-menu">
+                <li class="user-menu-item compare-products">
+                  <a class="user-menu-link compare-button" href="#">Сравнить</a>
+                  <span class="visually-hidden">Меню сравнения товаров.</span>
+                </li>
+                <li class="user-menu-item cart">
+                  <a class="user-menu-link cart-button" href="#">
+                    <span class="cart-number">2</span>
+                    <span>Корзина</span>
+                  </a>
+                  <div class="popover popover-cart">
+                    <div class="popover-cart-wrapper">
+                      <h2 class="visually-hidden">Окно корзины.</h2>
+                    <ul class="cart-contents-list">
+                      <li class="cart-item">
+                        <a class="cart-item-link" href="#">
+                          <img class="cart-item-image" src="images/photos/cart-product-1.jpg" width="39" height="43"
+                            alt="Любительская селфи-палка.">
+                          <p class="cart-item-name">Любительская селфи-палка</p>
+                        </a>
+                        <button class="cart-item-delete-button" type="button"
+                          aria-label="Удалить товар из корзины"></button>
+                      </li>
+                      <li class="cart-item">
+                        <a class="cart-item-link" href="#">
+                          <img class="cart-item-image" src="images/photos/cart-product-2.jpg" width="39" height="43"
+                            alt="Профессиональная селфи-палка.">
+                          <p class="cart-item-name">Профессиональная селфи-палка</p>
+                        </a>
+                        <button class="cart-item-delete-button" type="button"
+                          aria-label="Удалить товар из корзины"></button>
+                      </li>
+                    </ul>
+                    <div class="purchase-total-info">
+                      <p class="purchase-items-total-quantity">Товаров: 2</p>
+                      <p class="purchase-items-total-price">Сумма: 2000 ₽</p>
+                    </div>
+                    <a class="open-cart-button" href="#">Открыть корзину</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <ul class="navigation-list user-menu">
-              <li class="user-menu-item compare-products">
-                <a class="user-menu-link compare-button" href="#">Сравнить</a>
-                <span class="visually-hidden">Меню сравнения товаров.</span>
-              </li>
-              <li class="user-menu-item cart">
-                <a class="user-menu-link cart-button" href="#">
-                  <span class="cart-number">2</span>
-                  <span>Корзина</span>
-                </a>
-                <div class="popover popover-cart">
-                  <div class="popover-cart-wrapper">
-                    <h2 class="visually-hidden">Окно корзины.</h2>
-                  <ul class="cart-contents-list">
-                    <li class="cart-item">
-                      <a class="cart-item-link" href="#">
-                        <img class="cart-item-image" src="images/photos/cart-product-1.jpg" width="39" height="43"
-                          alt="Любительская селфи-палка.">
-                        <p class="cart-item-name">Любительская селфи-палка</p>
-                      </a>
-                      <button class="cart-item-delete-button" type="button"
-                        aria-label="Удалить товар из корзины"></button>
+            <div class="site-navigation-wrapper-down">
+              <div class="product-list-container">
+                <a class="product-list-dropdown-menu" href="#">Каталог товаров</a>
+                <div class="subcatalog">
+                  <ul class="subcatalog-list first-column">
+                    <li class="subcatalog-item">
+                      <a class="subcatalog-link" href="#">Виртуальная реальность</a>
                     </li>
-                    <li class="cart-item">
-                      <a class="cart-item-link" href="#">
-                        <img class="cart-item-image" src="images/photos/cart-product-2.jpg" width="39" height="43"
-                          alt="Профессиональная селфи-палка.">
-                        <p class="cart-item-name">Профессиональная селфи-палка</p>
-                      </a>
-                      <button class="cart-item-delete-button" type="button"
-                        aria-label="Удалить товар из корзины"></button>
+                    <li class="subcatalog-item">
+                      <a class="subcatalog-link" href="catalog.html">Моноподы для cелфи</a>
+                    </li>
+                    <li class="subcatalog-item">
+                      <a class="subcatalog-link" href="#">Экшн-камеры</a>
                     </li>
                   </ul>
-                  <div class="purchase-total-info">
-                    <p class="purchase-items-total-quantity">Товаров: 2</p>
-                    <p class="purchase-items-total-price">Сумма: 2000 ₽</p>
-                  </div>
-                  <a class="open-cart-button" href="#">Открыть корзину</a>
-                  </div>
+                  <ul class="subcatalog-list second-column">
+                    <li class="subcatalog-item">
+                      <a class="subcatalog-link" href="#">Фитнес-браслеты</a>
+                    </li>
+                    <li class="subcatalog-item">
+                      <a class="subcatalog-link" href="#">Умные часы</a>
+                    </li>
+                  </ul>
+                  <ul class="subcatalog-list third-column">
+                    <li class="subcatalog-item">
+                      <a class="subcatalog-link" href="#">Квадрокоптеры</a>
+                    </li>
+                  </ul>
                 </div>
-              </li>
-            </ul>
-            <div class="product-list-container">
-              <a class="product-list-dropdown-menu" href="#">Каталог товаров</a>
-              <div class="subcatalog">
-                <ul class="subcatalog-list first-column">
-                  <li class="subcatalog-item">
-                    <a class="subcatalog-link" href="#">Виртуальная реальность</a>
+              </div>
+              <div class="main-menu-container">
+                <ul class="product-list">
+                  <li class="product-list-item">
+                    <a class="product-list-link" href="#">Доставка</a>
                   </li>
-                  <li class="subcatalog-item">
-                    <a class="subcatalog-link" href="catalog.html">Моноподы для cелфи</a>
+                  <li class="product-list-item">
+                    <a class="product-list-link" href="#">Гарантия</a>
                   </li>
-                  <li class="subcatalog-item">
-                    <a class="subcatalog-link" href="#">Экшн-камеры</a>
-                  </li>
-                </ul>
-                <ul class="subcatalog-list second-column">
-                  <li class="subcatalog-item">
-                    <a class="subcatalog-link" href="#">Фитнес-браслеты</a>
-                  </li>
-                  <li class="subcatalog-item">
-                    <a class="subcatalog-link" href="#">Умные часы</a>
-                  </li>
-                </ul>
-                <ul class="subcatalog-list third-column">
-                  <li class="subcatalog-item">
-                    <a class="subcatalog-link" href="#">Квадрокоптеры</a>
+                  <li class="product-list-item">
+                    <a class="product-list-link" href="#">Контакты</a>
                   </li>
                 </ul>
               </div>
-            </div>
-            <div class="main-menu-container">
-              <ul class="product-list">
-                <li class="product-list-item">
-                  <a class="product-list-link" href="#">Доставка</a>
-                </li>
-                <li class="product-list-item">
-                  <a class="product-list-link" href="#">Гарантия</a>
-                </li>
-                <li class="product-list-item">
-                  <a class="product-list-link" href="#">Контакты</a>
-                </li>
-              </ul>
             </div>
           </nav>
         </div>
