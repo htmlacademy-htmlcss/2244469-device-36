@@ -270,18 +270,22 @@ html {
 }
 
 .site-navigation,
-.site-navigation-wrapper-up,
-.site-navigation-wrapper-down {
+.site-navigation-wrapper-top,
+.site-navigation-wrapper-bottom {
   width: 1040px;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+
   position: relative;
   row-gap: 31px;
 }
 
-.site-navigation-wrapper-up {
+.site-navigation-wrapper-top {
   flex-wrap: nowrap;
+}
+
+.site-navigation-wrapper-bottom {
+  align-items: flex;
 }
 
 .user-navigation {
@@ -562,7 +566,7 @@ html {
   width: 50px;
   height: 50px;
   position: absolute;
-  top: -1px;
+  top: calc(100% - 50px);
   right: 1px;
   border: 2px solid #000000;
   border-radius: 50%;
@@ -622,9 +626,9 @@ html {
   display: none;
   flex-wrap: wrap;
   position: absolute;
-  top: 30px;
+  top: calc(100% - 21px);
   left: -60px;
-  padding: 34px 60px 38px;
+  padding: 34px 60px 39px;
   width: 1160px;
   box-sizing: border-box;
   font-family: "Rubik", sans-serif;
