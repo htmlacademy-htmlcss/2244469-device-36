@@ -1181,7 +1181,6 @@ html {
 }
 
 .services-info {
-  display: flex;
   background-color: #F0F0F0;
   padding-bottom: 73px;
   margin-bottom: 70px;
@@ -1191,6 +1190,7 @@ html {
 
 .services-content {
   display: flex;
+  flex-wrap: wrap;
   column-gap: 116px;
   width: 1160px;
   margin: 0 auto;
@@ -1207,9 +1207,6 @@ html {
 }
 
 .services-info-list {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
   width: 287px;
   margin: 0;
   padding: 63px 0 62px;
@@ -1217,16 +1214,16 @@ html {
   border-right: 7px solid #000000;
   list-style-type: none;
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 .services-info-text-container {
-  display: flex;
-  justify-content: flex-start;
-  width: 760px;
+  width: 730px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style-type: none;
+  flex-shrink: 0;
 }
 
 .services-info-item {
@@ -1386,6 +1383,8 @@ html {
 
 .company-info-container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 40px 108px;
   width: 1160px;
   margin: 0 auto 70px;
 }
@@ -1403,10 +1402,6 @@ html {
   top: 0;
   left: 0;
   background-color: #000000;
-}
-
-.company-info:not(:last-child) {
-  margin-right: 108px;
 }
 
 .company-info-heading {
@@ -1703,7 +1698,7 @@ html {
   color: #FFFFFF;
   background-color: #444444;
   text-decoration: none;
-  padding: 4px 0;
+  padding: 6px 0;
 }
 
 .footer-contacts-phone {
@@ -3028,10 +3023,13 @@ input[type="number"] {
 
 .pagination-button {
   display: block;
-  max-width: 128px;
-  padding: 26px 22px 23px 24px;
+  max-width: 200px;
+  min-height: 70px;
+  padding: 26px 22px 24px 25px;
   text-decoration: none;
+  text-align: center;
   color: #000000;
+  box-sizing: border-box;
 }
 
 .pagination-button.pagination-disabled,
