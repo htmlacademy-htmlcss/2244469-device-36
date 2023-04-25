@@ -1670,7 +1670,7 @@ html {
 }
 
 .footer-contacts-address {
-  max-width: 239px;
+  max-width: 240px;
   flex-shrink: 0;
 }
 
@@ -1687,7 +1687,7 @@ html {
 
 .footer-services-list {
   display: flex;
-  width: 456px;
+  width: 466px;
   justify-content: center;
   flex-wrap: wrap;
   gap: 14px 32px;
