@@ -402,7 +402,7 @@ html {
   top: 1px;
   left: 50%;
   transform: translateX(-50%);
-  background: url(../images/cart-popover-arrow-up.svg) no-repeat center;
+  background: url("../images/cart-popover-arrow-up.svg") no-repeat center;
   z-index: inherit;
   box-sizing: border-box;
 }
@@ -1578,22 +1578,25 @@ html {
   background-color: transparent;
 }
 
-.newsletter-subscription-field .field:invalid {
+.newsletter-subscription-field .field:not(:placeholder-shown):invalid {
   border-bottom: 3px solid #FF3D3D;
+  background-color: #FFFFFF;
 }
 
 .newsletter-subscription-field .field:placeholder-shown {
   color: rgba(68, 68, 68, 0.5);
   border-bottom: 3px solid #C4C4C4;
+  background-color: transparent;
 }
 
-.newsletter-subscription-field .field:focus {
+.newsletter-subscription-field .field:focus-within {
   background-color: #DCDCDC;
   outline: none;
 }
 
 .newsletter-subscription-field .field:disabled {
   opacity: 0.3;
+  background-color: transparent;
 }
 
 .submit-button {
@@ -1667,7 +1670,7 @@ html {
 }
 
 .footer-contacts-address {
-  max-width: 239px;
+  max-width: 240px;
   flex-shrink: 0;
 }
 
@@ -1684,7 +1687,7 @@ html {
 
 .footer-services-list {
   display: flex;
-  width: 456px;
+  width: 466px;
   justify-content: center;
   flex-wrap: wrap;
   gap: 14px 32px;
@@ -1820,15 +1823,15 @@ html {
 }
 
 .telegram {
-  background: url(../images/icons/social-icon-telegram.svg) no-repeat center;
+  background: url("../images/icons/social-icon-telegram.svg") no-repeat center;
 }
 
 .youtube {
-  background: url(../images/icons/social-icon-youtube.svg) no-repeat center;
+  background: url("../images/icons/social-icon-youtube.svg") no-repeat center;
 }
 
 .twitter {
-  background: url(../images/icons/social-icon-twitter.svg) no-repeat center
+  background: url("../images/icons/social-icon-twitter.svg") no-repeat center
 }
 
 .developer-logo-container {
