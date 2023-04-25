@@ -122,7 +122,7 @@ if (servicesLinksList) {
 
 if (itemsNumberInput) {
   itemsNumberButtonMinus.addEventListener('click', () => {
-    if (itemsNumberInput.value > 1) {
+    if (itemsNumberInput.value > 0) {
       itemsNumberInput.value--;
     }
   });
