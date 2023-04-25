@@ -659,6 +659,11 @@ html {
   margin-bottom: 18px;
 }
 
+.subcatalog-link-current {
+  padding-bottom: 2px;
+  border-bottom: 1px solid #000000;
+}
+
 .main-menu-container {
   width: 652px;
   margin: 0 -3px 0 auto;
@@ -677,7 +682,13 @@ html {
 
 .product-list-link {
   display: inline-block;
-  padding: 14px 0 15px;
+  padding: 0;
+  margin: 14px 0 15px;
+}
+
+.item-link-current {
+  padding-bottom: 4px;
+  border-bottom: 2px solid #000000;
 }
 
 .product-list-link:hover,
@@ -704,24 +715,6 @@ html {
 
 .product-list-link:active,
 .subcatalog-link:active {
-  opacity: 0.3;
-}
-
-.active-item-link {
-  border-bottom: 2px solid #000000;
-}
-
-.active-item-link:hover {
-  border-bottom: 2px solid #000000;
-  opacity: 0.6;
-}
-
-.active-item-link:focus {
-  border-bottom: 2px solid #000000;
-}
-
-.active-item-link:active {
-  border-bottom: 2px solid #000000;
   opacity: 0.3;
 }
 
@@ -2218,6 +2211,7 @@ input[type="email"]::-webkit-contacts-auto-fill-button {
   padding: 0 30px 40px 30px;
   position: absolute;
   top: -2px;
+  left: 2px;
   background: url("../images/modal-tooltip.svg") no-repeat 5px 0;
   cursor: pointer;
   -webkit-appearance: none;
@@ -2232,7 +2226,7 @@ input[type="email"]::-webkit-contacts-auto-fill-button {
   width: 26px;
   height: 26px;
   top: 0;
-  left: 8px;
+  left: 5px;
 }
 
 .tooltip-text {
