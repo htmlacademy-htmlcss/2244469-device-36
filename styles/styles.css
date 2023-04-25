@@ -1086,7 +1086,7 @@ html {
 .product-category-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 20px 40px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -1181,6 +1181,7 @@ html {
 }
 
 .services-info {
+  display: flex;
   background-color: #F0F0F0;
   padding-bottom: 73px;
   margin-bottom: 70px;
@@ -1190,6 +1191,7 @@ html {
 
 .services-content {
   display: flex;
+  column-gap: 116px;
   width: 1160px;
   margin: 0 auto;
   position: relative;
@@ -1208,12 +1210,13 @@ html {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  width: 280px;
-  margin: 0 116px 0 0;
+  width: 287px;
+  margin: 0;
   padding: 63px 0 62px;
   position: relative;
   border-right: 7px solid #000000;
   list-style-type: none;
+  box-sizing: border-box;
 }
 
 .services-info-text-container {
